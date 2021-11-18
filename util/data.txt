@@ -1,1 +1,0 @@
-{"type":"startWatching","data":{"stream":{"quality":"8Mbps1080p60fps","protocol":"hls","latency":"high","chasePlay":false},"room":{"protocol":"webSocket","commentable":true},"reconnect":false}}
