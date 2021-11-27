@@ -1,4 +1,4 @@
-﻿var commentTextOnRoom = `// 从生放送网页提取nico服务器websocket的链接与用户ID
+var commentTextOnRoom = `// 从生放送网页提取nico服务器websocket的链接与用户ID
 const embeddedData = JSON.parse(document.getElementById("embedded-data").getAttribute("data-props"));
 const url_system = embeddedData.site.relive.webSocketUrl;
 // const user_id = embeddedData.user.id
@@ -161,6 +161,48 @@ function doSend_comment(message)
   websocket_comment.send(message);
 }
 
+// 去重
+function duplicate_removal() {
+	let uniqueDanmakuChatArray = [];
+				
+	danmakuChatArray.map((item,index)=>{
+		if (index == 0 || index == 1) {
+			return true;
+		}
+		
+		
+		if (item.chat.vpos == danmakuChatArray[index-1].chat.vpos && item.chat.date_usec == danmakuChatArray[index-1].chat.date_usec) {
+			return true;
+		} else {
+			uniqueDanmakuChatArray.push(item);
+		}
+	})
+	
+	// 获取lv号&获取标题
+	LV = document.URL.split("/").slice(-1)[0];
+	fristObj["thread"]["lv"] = LV.indexOf("?")>-1 ? LV.substr(0, LV.indexOf("?")) : LV;
+	fristObj["thread"]["title"] = jsonToXml_RegExp(document.title);
+	uniqueDanmakuChatArray.unshift(fristObj);
+	
+	console.log(uniqueDanmakuChatArray);
+}
+
+// XML特殊符号转义
+function jsonToXml_RegExp(text) {
+	let text_RegExp = "";
+	
+	// 替换转义字符
+	var reg1 = new RegExp('<',"g"); // <
+	var reg2 = new RegExp('>',"g"); // >
+	var reg3 = new RegExp('&',"g"); // &
+	var reg4 = new RegExp("'","g"); // '
+	var reg5 = new RegExp('"',"g"); // "
+	
+	text_RegExp = text.replace(reg1, "").replace(reg2, "").replace(reg3, "").replace(reg4, "").replace(reg5, '');
+	// text_RegExp = text.replace(reg1, "&lt;").replace(reg2, "&gt;").replace(reg3, "&amp;").replace(reg4, "&apos;").replace(reg5, '&quot;');
+	return text_RegExp;
+}
+
 // 设置获取弹幕计时器
 function get_comment_timer() {
 	let getCommentTimer = setInterval(function(){
@@ -187,35 +229,8 @@ function get_comment_timer() {
 			duplicate_removal();
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制上行---");
 		}
-	}, 2000)
+	}, 4000)
 }
-
-// 去重
-function duplicate_removal() {
-	let uniqueDanmakuChatArray = [];
-				
-	danmakuChatArray.map((item,index)=>{
-		if (index == 0 || index == 1) {
-			return true;
-		}
-		
-		
-		if (item.chat.vpos == danmakuChatArray[index-1].chat.vpos && item.chat.date_usec == danmakuChatArray[index-1].chat.date_usec) {
-			return true;
-		} else {
-			uniqueDanmakuChatArray.push(item);
-		}
-	})
-	
-	// 获取lv号&获取标题
-	LV = document.URL.split("/").slice(-1)[0];
-	fristObj["thread"]["lv"] = LV.indexOf("?")>-1 ? LV.substr(0, LV.indexOf("?")) : LV;
-	fristObj["thread"]["title"] = document.title;
-	uniqueDanmakuChatArray.unshift(fristObj);
-	
-	console.log(uniqueDanmakuChatArray);
-}
-
 
 // 执行连接nico的websocket方法
 connect_WebSocket_system();`;

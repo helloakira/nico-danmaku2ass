@@ -162,6 +162,22 @@ function doSend_comment(message)
   websocket_comment.send(message);
 }
 
+// XML特殊符号转义
+function jsonToXml_RegExp(text) {
+	let text_RegExp = "";
+	
+	// 替换转义字符
+	var reg1 = new RegExp('<',"g"); // <
+	var reg2 = new RegExp('>',"g"); // >
+	var reg3 = new RegExp('&',"g"); // &
+	var reg4 = new RegExp("'","g"); // '
+	var reg5 = new RegExp('"',"g"); // "
+	
+	text_RegExp = text.replace(reg1, "").replace(reg2, "").replace(reg3, "").replace(reg4, "").replace(reg5, '');
+	// text_RegExp = text.replace(reg1, "&lt;").replace(reg2, "&gt;").replace(reg3, "&amp;").replace(reg4, "&apos;").replace(reg5, '&quot;');
+	return text_RegExp;
+}
+
 // 设置获取弹幕计时器
 function get_comment_timer() {
 	let getCommentTimer = setInterval(function(){
@@ -184,13 +200,13 @@ function get_comment_timer() {
 			// 获取lv号&获取标题
 			LV = document.URL.split("/").slice(-1)[0];
 			fristObj["thread"]["lv"] = LV.indexOf("?")>-1 ? LV.substr(0, LV.indexOf("?")) : LV;
-			fristObj["thread"]["title"] = document.title;
+			fristObj["thread"]["title"] = jsonToXml_RegExp(document.title);
 			danmakuChatArray.unshift(fristObj);
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制下行---");
 			console.log(danmakuChatArray);
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制上行---");
 		}
-	}, 2000)
+	}, 4000)
 }
 
 // 执行连接nico的websocket方法
