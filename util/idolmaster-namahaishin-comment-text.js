@@ -229,7 +229,7 @@ function get_comment_timer() {
 			duplicate_removal();
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制上行---");
 		}
-	}, 4000)
+	}, 3000)
 }
 
 // 执行连接nico的websocket方法
