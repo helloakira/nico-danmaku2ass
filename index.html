@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -41,6 +41,7 @@
 				是否过滤非会员<input type="checkbox" id="filterOutsider" name="filterOutsider" value="0" />（默认不使用 没必要）<br />
 				是否使用速度算法<input type="checkbox" id="useSpeedA" name="useSpeedA" value="0" />（默认不使用 使用算法滚动速度会平均点）<br />
 				手动添加运营弹幕ID<input type="text" id="manualAddOfficeId" name="manualAddOfficeId" style="width: 300px;" value="" />（默认空 用于无法识别或添加特定ID 输入多个用英文的逗号,隔开 如 illumination,gezi,jiaozi,megumi）（只能靠重新刷新页面取消之前手动输过的ID）<br />
+				屏蔽过滤关键词<input type="text" id="filterKeywords" name="filterKeywords" style="width: 300px;" value="" />（默认空 用于无法识别或添加特定ID 输入多个用英文的逗号,隔开 如上）<br />
 			</div>
 			
 			<br />
@@ -387,7 +388,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 					}
 				})
 				
-				// 从页面手动添加官方弹幕ID
+				// 获取页面手动添加的官方弹幕ID
 				var $manualAddOfficeId = document.getElementById('manualAddOfficeId').value;
 				var manualAddOfficeIdArrays = $manualAddOfficeId.trim().split(',');
 				
@@ -396,6 +397,10 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 						officeIds.push(item);
 					}
 				})
+				
+				// 获取页面手动添加的关键词
+				var $filterKeywords = document.getElementById('filterKeywords').value;
+				var filterKeywordsArrays = $filterKeywords.trim().split(',');
 				
 				// 头文件合并句子
 				juzis = header +"\n";
@@ -457,6 +462,13 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 						return true;
 					}
 					
+					// 屏蔽关键词
+					for (let i = 0; i < filterKeywordsArrays.length; i++) {
+						if(item["__text"].indexOf(filterKeywordsArrays[i]) != -1) {
+							return true;
+						}
+					}
+
 					// 处理没有VSOP的
 					if (item.hasOwnProperty("_vpos") == false) {
 						return true;
@@ -1394,7 +1406,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 					difficultVIP: document.getElementById("difficultVIP").checked,
 					filterOutsider: document.getElementById("filterOutsider").checked,
 					useSpeedA: document.getElementById("useSpeedA").checked,
-					manualAddOfficeId: document.getElementById("manualAddOfficeId").value
+					manualAddOfficeId: document.getElementById("manualAddOfficeId").value,
+					filterKeywords: document.getElementById("filterKeywords").value
 				};
 				useSetting = JSON.stringify(useSetting);
 				window.localStorage.setItem('useSetting',useSetting);
@@ -1414,6 +1427,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 				document.getElementById("filterOutsider").checked = useSetting.filterOutsider;
 				document.getElementById("useSpeedA").checked = useSetting.useSpeedA;
 				document.getElementById("manualAddOfficeId").value = useSetting.manualAddOfficeId;
+				document.getElementById("filterKeywords").value = useSetting.filterKeywords;
 			}
 
 			function defaultUseSetting() {
@@ -1427,7 +1441,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 					"difficultVIP": false,
 					"filterOutsider": false,
 					"useSpeedA": false,
-					"manualAddOfficeId": ""
+					"manualAddOfficeId": "",
+					"filterKeywords": ""
 				}
 			
 				document.getElementById("limitLineAmount").value = useSetting.limitLineAmount;
@@ -1440,6 +1455,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 				document.getElementById("filterOutsider").checked = useSetting.filterOutsider;
 				document.getElementById("useSpeedA").checked = useSetting.useSpeedA;
 				document.getElementById("manualAddOfficeId").value = useSetting.manualAddOfficeId;
+				document.getElementById("filterKeywords").value = useSetting.filterKeywords;
 				
 				window.localStorage.removeItem('useSetting');
 			}
