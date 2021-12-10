@@ -464,7 +464,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 					
 					// 屏蔽关键词
 					for (let i = 0; i < filterKeywordsArrays.length; i++) {
-						if(item["__text"].indexOf(filterKeywordsArrays[i]) != -1) {
+						if(filterKeywordsArrays[i] != "" && item["__text"].indexOf(filterKeywordsArrays[i]) != -1) {
 							return true;
 						}
 					}
