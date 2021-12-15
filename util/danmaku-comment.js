@@ -1,4 +1,4 @@
-// 从生放送网页提取nico服务器websocket的链接与用户ID
+﻿// 从生放送网页提取nico服务器websocket的链接与用户ID
 const embeddedData = JSON.parse(document.getElementById("embedded-data").getAttribute("data-props"));
 const url_system = embeddedData.site.relive.webSocketUrl;
 // const user_id = embeddedData.user.id

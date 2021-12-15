@@ -42,6 +42,9 @@
 				是否使用速度算法<input type="checkbox" id="useSpeedA" name="useSpeedA" value="0" />（默认不使用 使用算法滚动速度会平均点）<br />
 				手动添加运营弹幕ID<input type="text" id="manualAddOfficeId" name="manualAddOfficeId" style="width: 300px;" value="" />（默认空 用于无法识别或添加特定ID 输入多个用英文的逗号,隔开 如 illumination,gezi,jiaozi,megumi）（只能靠重新刷新页面取消之前手动输过的ID）<br />
 				屏蔽过滤关键词<input type="text" id="filterKeywords" name="filterKeywords" style="width: 300px;" value="" />（默认空 输入多个用英文的逗号,隔开 如上）<br />
+				
+				<br />
+				使用方式一的数组数据过大，用自建的TXT转XML，再用方式二转ASS：<input type="file" onchange="uploadBigTXT(this)" id="txtFile" /><input type="button" value="加载" onclick="bigTXT2xml()"><input type="button" value="将其保存为XML" onclick="json2xmlSave()"><br />
 			</div>
 			
 			<br />
@@ -55,7 +58,7 @@
 						<div>
 							1.复制命令：<input id="copyDanmakuComment" type="button" value="将扣弹幕命令复制到剪贴板" onclick="copyDanmakuComment()" data-clipboard-target="#commentTextDiv" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuCommentOnRoom" type="button" value="（爱马仕官方LV生放送ROOM类型专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnRoom()" data-clipboard-target="#commentTextOnRoomDiv" /> <br />
 							
-							2.加载复制回来的数组：<br />
+							2.加载复制回来的数组：<br /> 
 							<textarea id="jsonTextarea" rows="8" cols="40"></textarea><br />
 							<input type="button" value="加载" onclick="object2xml()" />
 							<input type="button" value="清空" onclick="document.getElementById('jsonTextarea').value=''" /><br />
@@ -85,7 +88,6 @@
 		</div>
 		
 		<!-- 读取到的XML文本预览： -->
-		<div id="json" style="height: 0px;overflow:auto;opacity:0;"></div>
 		<textarea id="commentTextDiv" style="opacity:0;height: 0px;"></textarea>
 		<textarea id="commentTextOnRoomDiv" style="opacity:0;height: 0px;"></textarea>
 		
@@ -138,7 +140,7 @@
 				getUseSetting();
 			}
 			
-		
+			let jsonInnerText = "";
 			function upload(input) {
 				//支持chrome IE10
 				if (window.FileReader) {
@@ -149,7 +151,7 @@
 					reader.readAsText(file);
 					reader.onload = function() {  
 						console.log(this.result);
-						document.getElementById('json').innerText = this.result;
+						jsonInnerText = this.result;
 						checkOffice();
 					}
 				} else {   
@@ -157,6 +159,90 @@
 				}   
 			}
 			
+			let bigTXT = ``;
+			function uploadBigTXT(input) {
+				//支持chrome IE10
+				if (window.FileReader) {
+					var file = input.files[0];  
+					var filename = file.name.split(".")[0];
+					document.getElementById("nicoTitle").innerHTML = filename;
+					var reader = new FileReader();  
+					reader.readAsText(file);
+					reader.onload = function() {
+						bigTXT = this.result;
+						
+					}
+				} else {
+					alert('error');   
+				}   
+			}
+			
+			function bigTXT2xml() {
+				console.log(bigTXT);
+				
+				object2xmlText = "";
+				nicoLv = "";
+				nicoTitle = "";
+				
+				// 获取文本框内容
+				var apiJsonText = bigTXT;
+				apiArray = eval(bigTXT);
+				
+				if (apiJsonText.indexOf("ping") == -1 && apiJsonText.indexOf("content")) {
+					// 获取标题
+					nicoLv = apiArray[0].thread.lv;
+					nicoTitle = apiArray[0].thread.title;
+			
+					document.getElementById("nicoTitle").innerHTML = `${nicoLv} - ${nicoTitle}`;
+					
+					// 处理thread
+					let threadJuzi = "<thread";
+					for (let key in apiArray[0].thread) {
+						threadJuzi += ` ${key}="${apiArray[0].thread[key]}"`;
+					}
+					threadJuzi += ` />`
+					
+					apiArray.shift();
+					
+					// 处理chat
+					let chatJuzis = "";
+					apiArray.map((item,index) => {
+						let chatJuzi = `<chat`
+						for (let key in item.chat) {
+							if (key != "content") {
+								chatJuzi += ` ${key}="${item.chat[key]}"`;
+							}
+						}
+					
+						content_RegExp = jsonToXml_RegExp(item.chat.content);
+						chatJuzi += `>${content_RegExp}</chat>\n`;
+					
+						chatJuzis += chatJuzi;
+					})
+					object2xmlText = `<?xml version='1.0' encoding='UTF-8'?>\n<packet>\n${threadJuzi}\n${chatJuzis}</packet>`;
+
+					console.log(object2xmlText);
+				} else {
+					// 处理chat
+					let chatJuzis = "";
+					apiArray.map((item,index) => {
+						if (item.hasOwnProperty("chat") == true) {
+							let chatJuzi = `<chat`
+							for (let key in item.chat) {
+								if (key != "content") {
+									chatJuzi += ` ${key}="${item.chat[key]}"`;
+								}
+							}
+							content_RegExp = jsonToXml_RegExp(item.chat.content);
+							chatJuzi += `>${content_RegExp}</chat>\n`;
+												
+							chatJuzis += chatJuzi;
+						} 
+					})
+					object2xmlText = `<?xml version='1.0' encoding='UTF-8'?>\n<packet>\n${chatJuzis}</packet>`;
+				}
+			}
+
 			let object2xmlText = "";
 			var nicoLv = "";
 			var nicoTitle = "";
@@ -203,7 +289,7 @@
 					})
 					object2xmlText = `<?xml version='1.0' encoding='UTF-8'?>\n<packet>\n${threadJuzi}\n${chatJuzis}</packet>`;
 					
-					document.getElementById('json').innerText = object2xmlText;
+					jsonInnerText = object2xmlText;
 					console.log(object2xmlText);
 					checkOffice();
 				} else {
@@ -225,12 +311,8 @@
 					})
 					object2xmlText = `<?xml version='1.0' encoding='UTF-8'?>\n<packet>\n${chatJuzis}</packet>`;
 					
-					document.getElementById('json').innerText = object2xmlText;
-					
+					jsonInnerText = object2xmlText;
 				}
-				
-				
-
 			}
 			
 			function checkOffice() {
@@ -243,9 +325,9 @@
 				var Dom_officeId = document.getElementById("officeId");
 				
 				// 拿文本
-				var text = document.getElementById('json').innerText;
+				var text = jsonInnerText;
 				// 转文本转成json
-				var jsonObjectAll = x2js.xml_str2json( document.getElementById('json').innerText );
+				var jsonObjectAll = x2js.xml_str2json( jsonInnerText );
 				// 判断是否为NicomentXenoglossia处理过的
 				var jsonObject = (!jsonObjectAll.hasOwnProperty("NiconamaComment") ?jsonObjectAll["packet"]["chat"]:jsonObjectAll["NiconamaComment"]["LiveCommentDataArray"]["chat"]);
 				// 排序
@@ -330,10 +412,10 @@
 				});
 				
 				// 拿文本
-				var text = document.getElementById('json').innerText;
+				var text = jsonInnerText;
 
 				// 转文本转成json
-				var jsonObjectAll = x2js.xml_str2json( document.getElementById('json').innerText );
+				var jsonObjectAll = x2js.xml_str2json( jsonInnerText );
 
 				// 判断是否为NicomentXenoglossia处理过的
 				var jsonObject = (!jsonObjectAll.hasOwnProperty("NiconamaComment") ?jsonObjectAll["packet"]["chat"]:jsonObjectAll["NiconamaComment"]["LiveCommentDataArray"]["chat"]);
