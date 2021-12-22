@@ -543,13 +543,6 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 					if(item["__text"] == "※ NGコメントです ※") {
 						return true;
 					}
-					
-					// 屏蔽关键词
-					for (let i = 0; i < filterKeywordsArrays.length; i++) {
-						if(filterKeywordsArrays[i] != "" && item["__text"].indexOf(filterKeywordsArrays[i]) != -1) {
-							return true;
-						}
-					}
 
 					// 处理没有VSOP的
 					if (item.hasOwnProperty("_vpos") == false) {
@@ -580,6 +573,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 						// 投票结束 /vote showresult per 438 562
 						var textArray = item["__text"].split(" ");
 						
+						console.log(textArray);
+						
 						// 找投票开始
 						if (textArray[0] == "/vote" && textArray[1] == "start") {
 							// 处理问卷调查开始时间
@@ -591,7 +586,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 							textQ = textArray[2];
 							// 从第三个开始赋值数组 ["Yes!","No..."]
 							textArrayQ = textArray.slice(3);
-							
+
 							// 运营弹幕含有空格处理
 							// ['"タッチ', '/', '岩崎良美"', '"恋', '/', '星野源"']
 							var allFristDoubleQuotation_index = [];
@@ -962,6 +957,13 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 						}
 	
 						return true;
+					}
+					
+					// 屏蔽关键词
+					for (let i = 0; i < filterKeywordsArrays.length; i++) {
+						if(filterKeywordsArrays[i] != "" && item["__text"].indexOf(filterKeywordsArrays[i]) != -1) {
+							return true;
+						}
 					}
 					
 					// 底层弹幕
