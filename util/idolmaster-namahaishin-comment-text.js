@@ -1,4 +1,4 @@
-﻿var commentTextOnRoom = `// 从生放送网页提取nico服务器websocket的链接与用户ID
+var commentTextOnRoom = `// 从生放送网页提取nico服务器websocket的链接与用户ID
 const embeddedData = JSON.parse(document.getElementById("embedded-data").getAttribute("data-props"));
 const url_system = embeddedData.site.relive.webSocketUrl;
 // const user_id = embeddedData.user.id
@@ -113,7 +113,9 @@ function connect_WebSocket_comment()
 function onOpen_comment(evt)
 {
   console.log("连接弹幕服务器");
-  doSend_comment(message_comment);
+  if (websocket_comment.readyState === 1) {
+  	doSend_comment(message_comment);
+  }
 }
 
 function onClose_comment(evt)
@@ -212,11 +214,10 @@ function get_comment_timer() {
 		liveEndTime = danmakuChatArray[0].chat.date;
 		
 		message_comment = '[{"ping":{"content":"rs:0"}},{"ping":{"content":"ps:0"}},{"thread":{"thread":"'+threadID+'","version":"20061206","user_id":"'+user_id+'","res_from":-1000,"with_global":1,"scores":1,"nicoru":0,"waybackkey":"","when":'+liveEndTime+'}},{"ping":{"content":"pf:0"}},{"ping":{"content":"rf:0"}}]'
-		// 与弹幕api开启websocket的session连接
-		connect_WebSocket_comment();
+		doSend_comment(message_comment);
 		
 		// 找到NO1
-		if (finish == 1) {
+		if (finish == 1 && danmakuChatArray[0].hasOwnProperty("thread") != true) {
 			clearInterval(getCommentTimer);
 			// 获取lv号&获取标题
 			LV = document.URL.split("/").slice(-1)[0];

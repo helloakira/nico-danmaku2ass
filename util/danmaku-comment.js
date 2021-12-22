@@ -1,4 +1,4 @@
-﻿// 从生放送网页提取nico服务器websocket的链接与用户ID
+// 从生放送网页提取nico服务器websocket的链接与用户ID
 const embeddedData = JSON.parse(document.getElementById("embedded-data").getAttribute("data-props"));
 const url_system = embeddedData.site.relive.webSocketUrl;
 // const user_id = embeddedData.user.id
@@ -109,7 +109,9 @@ function connect_WebSocket_comment()
 function onOpen_comment(evt)
 {
   console.log("连接弹幕服务器");
-  doSend_comment(message_comment);
+  if (websocket_comment.readyState === 1) {
+  	doSend_comment(message_comment);
+  }
 }
 
 function onClose_comment(evt)
@@ -182,32 +184,36 @@ function jsonToXml_RegExp(text) {
 function get_comment_timer() {
 	let getCommentTimer = setInterval(function(){
 		// 获取数组第一个元素 继续向弹幕服务器扒弹幕
-		danmakuChatArray.sort((a, b)=>{return a.chat.no - b.chat.no});
-		
-		if (danmakuChatNoArray.indexOf(1) !=-1) {
-			liveEndTime = danmakuChatArray[0].chat.date;
-		} else{
-			liveEndTime = danmakuChatArray[0].chat.date +10;
+		if (finish != 1) {
+			danmakuChatArray.sort((a, b)=>{return a.chat.no - b.chat.no});
+			
+			if (danmakuChatNoArray.indexOf(1) !=-1) {
+				liveEndTime = danmakuChatArray[0].chat.date;
+			} else{
+				liveEndTime = danmakuChatArray[0].chat.date +10;
+			}
+			
+			message_comment = '[{"ping":{"content":"rs:0"}},{"ping":{"content":"ps:0"}},{"thread":{"thread":"'+threadID+'","version":"20061206","user_id":"'+user_id+'","res_from":-1000,"with_global":1,"scores":1,"nicoru":0,"waybackkey":"","when":'+liveEndTime+'}},{"ping":{"content":"pf:0"}},{"ping":{"content":"rf:0"}}]'
+			doSend_comment(message_comment);
 		}
-		
-		message_comment = '[{"ping":{"content":"rs:0"}},{"ping":{"content":"ps:0"}},{"thread":{"thread":"'+threadID+'","version":"20061206","user_id":"'+user_id+'","res_from":-1000,"with_global":1,"scores":1,"nicoru":0,"waybackkey":"","when":'+liveEndTime+'}},{"ping":{"content":"pf:0"}},{"ping":{"content":"rf:0"}}]'
-		// 与弹幕api开启websocket的session连接
-		connect_WebSocket_comment();
-		
+
 		// 找到NO1
-		if (danmakuChatNoArray.indexOf(1) !=-1 && finish == 1) {
+		if (danmakuChatNoArray.indexOf(1) !=-1 && finish == 1 && danmakuChatArray[0].hasOwnProperty("thread") != true) {
 			clearInterval(getCommentTimer);
 			// 获取lv号&获取标题
 			LV = document.URL.split("/").slice(-1)[0];
 			fristObj["thread"]["lv"] = LV.indexOf("?")>-1 ? LV.substr(0, LV.indexOf("?")) : LV;
 			fristObj["thread"]["title"] = jsonToXml_RegExp(document.title);
-			console.log(fristObj["thread"]["title"]);
 			danmakuChatArray.unshift(fristObj);
+
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制下行---");
 			console.log(danmakuChatArray);
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制上行---");
 		}
-	}, 3000)
+		
+		
+
+	}, 2000)
 }
 
 // 执行连接nico的websocket方法
