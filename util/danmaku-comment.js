@@ -181,6 +181,7 @@ function jsonToXml_RegExp(text) {
 }
 
 // 设置获取弹幕计时器
+let lastTime = 0;
 function get_comment_timer() {
 	let getCommentTimer = setInterval(function(){
 		// 获取数组第一个元素 继续向弹幕服务器扒弹幕
@@ -194,7 +195,10 @@ function get_comment_timer() {
 			}
 			
 			message_comment = '[{"ping":{"content":"rs:0"}},{"ping":{"content":"ps:0"}},{"thread":{"thread":"'+threadID+'","version":"20061206","user_id":"'+user_id+'","res_from":-1000,"with_global":1,"scores":1,"nicoru":0,"waybackkey":"","when":'+liveEndTime+'}},{"ping":{"content":"pf:0"}},{"ping":{"content":"rf:0"}}]'
-			doSend_comment(message_comment);
+			if (liveEndTime != lastTime) {
+				doSend_comment(message_comment);
+				lastTime = liveEndTime
+			}
 		}
 
 		// 找到NO1

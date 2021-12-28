@@ -113,7 +113,7 @@ function connect_WebSocket_comment()
 function onOpen_comment(evt)
 {
   console.log("连接弹幕服务器");
-  if (websocket_comment.readyState === 1) {
+  if (websocket_comment.readyState === 1 && danmakuChatArray.length === 0) {
   	doSend_comment(message_comment);
   }
 }
@@ -166,12 +166,12 @@ function doSend_comment(message)
 // 去重
 function duplicate_removal() {
 	let uniqueDanmakuChatArray = [];
-				
+	
+	danmakuChatArray.sort((a, b)=>{return a.chat.date - b.chat.date});
 	danmakuChatArray.map((item,index)=>{
 		if (index == 0 || index == 1) {
 			return true;
 		}
-		
 		
 		if (item.chat.vpos == danmakuChatArray[index-1].chat.vpos && item.chat.date_usec == danmakuChatArray[index-1].chat.date_usec) {
 			return true;
@@ -179,6 +179,8 @@ function duplicate_removal() {
 			uniqueDanmakuChatArray.push(item);
 		}
 	})
+	
+	
 	
 	// 获取lv号&获取标题
 	LV = document.URL.split("/").slice(-1)[0];
@@ -206,6 +208,7 @@ function jsonToXml_RegExp(text) {
 }
 
 // 设置获取弹幕计时器
+let lastTime = 0;
 function get_comment_timer() {
 	let getCommentTimer = setInterval(function(){
 		// 获取数组第一个元素 继续向弹幕服务器扒弹幕
@@ -214,23 +217,25 @@ function get_comment_timer() {
 		liveEndTime = danmakuChatArray[0].chat.date;
 		
 		message_comment = '[{"ping":{"content":"rs:0"}},{"ping":{"content":"ps:0"}},{"thread":{"thread":"'+threadID+'","version":"20061206","user_id":"'+user_id+'","res_from":-1000,"with_global":1,"scores":1,"nicoru":0,"waybackkey":"","when":'+liveEndTime+'}},{"ping":{"content":"pf:0"}},{"ping":{"content":"rf:0"}}]'
-		doSend_comment(message_comment);
+		
+		if (liveEndTime != lastTime) {
+			doSend_comment(message_comment);
+			lastTime = liveEndTime
+		}
+		
+		
 		
 		// 找到NO1
 		if (finish == 1 && danmakuChatArray[0].hasOwnProperty("thread") != true) {
 			clearInterval(getCommentTimer);
-			// 获取lv号&获取标题
-			LV = document.URL.split("/").slice(-1)[0];
-			fristObj["thread"]["lv"] = LV.indexOf("?")>-1 ? LV.substr(0, LV.indexOf("?")) : LV;
-			fristObj["thread"]["title"] = document.title;
-			danmakuChatArray.unshift(fristObj);
 
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制下行---");
 			// console.log(danmakuChatArray);
+			
 			duplicate_removal();
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制上行---");
 		}
-	}, 5000)
+	}, 2000)
 }
 
 // 执行连接nico的websocket方法
