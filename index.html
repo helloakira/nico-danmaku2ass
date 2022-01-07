@@ -573,7 +573,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 						// 投票结束 /vote showresult per 438 562
 						var textArray = item["__text"].split(" ");
 						
-						console.log(textArray);
+						// console.log(textArray);
 						
 						// 找投票开始
 						if (textArray[0] == "/vote" && textArray[1] == "start") {
@@ -586,40 +586,22 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 							textQ = textArray[2];
 							// 从第三个开始赋值数组 ["Yes!","No..."]
 							textArrayQ = textArray.slice(3);
-
-							// 运营弹幕含有空格处理
-							// ['"タッチ', '/', '岩崎良美"', '"恋', '/', '星野源"']
-							var allFristDoubleQuotation_index = [];
-							var allLastDoubleQuotation_index = [];
-							textArrayQ.map((item,index)=> {
-								var fristStr = item.substring(0,1);
-								var lastStr = item.substring((item.length-1),item.length);
-								if (fristStr == '"') {
-									allFristDoubleQuotation_index.push(index);
-								}
-								if (lastStr == '"') {
-									allLastDoubleQuotation_index.push(index);
-								}
-							})
 							
-							if (allFristDoubleQuotation_index.length >= 2 && (allFristDoubleQuotation_index.length == allLastDoubleQuotation_index.length) ) {
-								// 步长
-								var stepLength = allFristDoubleQuotation_index[1] - allFristDoubleQuotation_index[0];
-								
-								// 新选项数组
-								var newTextArrayQ = [];
-								// 新选项分组
-								for (var i = 0; i < allFristDoubleQuotation_index.length; i++) {
-									var newArrayQ = textArrayQ.slice(i*stepLength, ((i+1)*stepLength) )
-									var arrJoinString = newArrayQ.join();
-									var afterReplaceString = arrJoinString.replace(/"/g,'').replace(/,/g,'');
-									newTextArrayQ.push(afterReplaceString);
+							// 含双引号修复
+							let hasDoubleQuotation = [];
+							for (let i = 0; i < textArrayQ.length; i++) {
+								if (textArrayQ[i].indexOf('"') != -1 && (textArrayQ[i].indexOf('"') == textArrayQ[i].lastIndexOf('"')) ) {
+									hasDoubleQuotation.push(i);
 								}
-								textArrayQ = [];
-								textArrayQ = newTextArrayQ;
-								
 							}
-							
+
+							if (hasDoubleQuotation.length >=2) {
+								for (let i = 0; i < hasDoubleQuotation.length; i+=2) {
+									
+									textArrayQ.splice(hasDoubleQuotation[i],hasDoubleQuotation[i+1]+1,textArrayQ.slice(hasDoubleQuotation[i],hasDoubleQuotation[i+1]+1).join(" ").replace(/"/g,'').replace(/,/g,''));
+									console.log(textArrayQ);
+								}
+							}
 						}
 						
 						// 找投票结束
