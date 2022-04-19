@@ -52,7 +52,7 @@
 			<div>
 				<div class="divBord">
 					方式一：通过浏览器开发工具扣弹幕（推荐用CHROME）<br />
-					补充说明：无需转发定向代理无需登录NICO账号，只需在对应已完结生放送的LV页面输入对应命令就能扣。能应对大多LV生放送与SO视频。扣爱马仕LV生放送的ROOM类型的仍在测试中。<br />
+					补充说明：无需转发定向代理无需登录NICO账号，只需在对应已完结生放送的LV页面输入对应命令就能扣。能应对大多LV生放送与SO视频。<br />
 					教程：<a href="浏览器扣弹幕使用说明/扣LV弹幕教程.html" target="_blank">扣LV弹幕教程</a>&nbsp;&nbsp;<a href="浏览器扣弹幕使用说明/扣SO弹幕教程.html" target="_blank">扣SO弹幕教程</a><br />
 					<br />
 						<div>
@@ -392,8 +392,8 @@
 				var officeIds = [];
 				
 				// AA字体大小
-				var AASize = 18;
-				var AAHighAdjust = 20;
+				var AASize = 20;
+				var AAHighAdjust = 80;
 				
 				// 运营弹幕字体大小等
 				var OfficeSize = 20;
@@ -438,7 +438,7 @@ Active Line: 11\n\
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n\
 Style: Default,微软雅黑,54,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,2,30,30,120,0\n\
 Style: Alternate,微软雅黑,36,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,2,30,30,84,0\n\
-Style: AA,黑体,${AASize},&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,2,2,30,30,84,0\n\
+Style: AA,Yu Gothic,${AASize},&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,2,2,30,30,84,0\n\
 Style: Office,MS PGothic,${OfficeSize},&H00FFFFFF,&H00FFFFFF,&H14000000,&H00000000,-1,0,0,0,100,100,2,0,1,2,0,2,30,30,30,0\n\
 Style: Anketo,MS PGothic,42,&H00FFFFFF,&H00FFFFFF,&H14000000,&H00000000,-1,0,0,0,100,100,2,0,1,2,0,2,30,30,30,0\n\
 Style: Shita,MS PGothic,46,&H00FFFFFF,&H00FFFFFF,&H14000000,&H00000000,-1,0,0,0,100,100,2,0,1,2,0,2,30,30,0,0\n\
@@ -837,8 +837,15 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 						var juziBg = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\p1\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&H000000&\\1a&H78&}${officeBg}\n`;
 						var juziText = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&HFFFFFF&\\fsp0}${text}\n`;
 
-						var textLength = Math.ceil(strlen(item["__text"])/2);
+						if (item["_premium"] == "7" && item.hasOwnProperty("_name")) {
+							var premium7Name = item["_name"];
+							
+							juziText = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&HFFFFFF&\\fsp0}${premium7Name}：${text}\n`;
+						}
 
+						var textLength = Math.ceil(strlen(item["__text"])/2);
+						
+						
 						
 						if ( textLength >= 60 ) {
 							var text = text.replace(/[^\x00-\xff]/g,"$&\x01").replace(/.{96}\x01?/g,"$&\\N").replace(/\x01/g,"");
@@ -928,7 +935,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 						var textAA = item["__text"].split("\n");
 
 						textAA.map((item, index) => {
-							var juzi = `Dialogue: 4,${startTime},${endTime},AA,,0,0,0,,{\\an4\\fsp-1\\move(${videoWidth}, ${(AASize-1)*index+AAHighAdjust}, ${-px64*10}, ${(AASize-1)*index+AAHighAdjust})\\1c&${colorASS}&}${item}\n`;
+							var juzi = `Dialogue: 4,${startTime},${endTime},AA,,0,0,0,,{\\an4\\fsp-1\\move(${videoWidth}, ${(AASize-6)*index+AAHighAdjust}, ${-px64*10}, ${(AASize-6)*index+AAHighAdjust})\\1c&${colorASS}&}${item}\n`;
 							juziAA += juzi;
 						});
 						
