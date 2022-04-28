@@ -510,8 +510,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 				var XArray = [[Math.floor(bgWidth/2)],[Math.floor(videoWidth/3)-40,(Math.floor(videoWidth/2)-Math.floor(videoWidth/3))+Math.floor(videoWidth/2)+40],[Math.floor(videoWidth/2)-bgWidth-40,Math.floor(videoWidth/2),Math.floor(videoWidth/2)+bgWidth+40]];
 				// Y轴
 				var YArray = [[Math.floor(videoHeight/2)],[Math.floor(videoHeight/3),(Math.floor(videoHeight/2)-Math.floor(videoHeight/3))+Math.floor(videoHeight/2)],[Math.floor(videoHeight/2)-bgHeight-20,Math.floor(videoHeight/2),Math.floor(videoHeight/2)+bgHeight+20]];
-				
-				
+
 				// 处理运营弹幕
 				var startTimeQ;	// 问卷开始时间
 				var textQ;			// 问卷题目文本
@@ -934,10 +933,22 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 						// AA弹幕
 						var textAA = item["__text"].split("\n");
 
-						textAA.map((item, index) => {
-							var juzi = `Dialogue: 4,${startTime},${endTime},AA,,0,0,0,,{\\an4\\fsp-1\\move(${videoWidth}, ${(AASize-6)*index+AAHighAdjust}, ${-px64*10}, ${(AASize-6)*index+AAHighAdjust})\\1c&${colorASS}&}${item}\n`;
-							juziAA += juzi;
-						});
+						if (item.hasOwnProperty("_mail") && (item["_mail"].indexOf("shita") != -1 || item["_mail"].indexOf("ue") != -1 || item["_mail"].indexOf("naka") != -1 ) ) {
+							textAA.map((item, index) => {
+								var juzi = `Dialogue: 4,${startTime},${endTime},AA,,0,0,0,,{\\an4\\fsp-1\\pos(${videoWidth/2-250}, ${(AASize-6)*index+AAHighAdjust})\\1c&${colorASS}&}${item}\n`;
+							
+								juziAA += juzi;
+							});
+							
+						} else {
+							textAA.map((item, index) => {
+								var juzi = `Dialogue: 4,${startTime},${endTime},AA,,0,0,0,,{\\an4\\fsp-1\\move(${videoWidth}, ${(AASize-6)*index+AAHighAdjust}, ${-px64*10}, ${(AASize-6)*index+AAHighAdjust})\\1c&${colorASS}&}${item}\n`;
+							
+								juziAA += juzi;
+							});
+						}
+
+						
 						
 						var AAstartTime = timeFormat_AA(parseInt(startSecondsArray[0]));
 						
