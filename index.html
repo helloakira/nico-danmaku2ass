@@ -58,7 +58,7 @@
 					<br />
 						<div>
 							1.复制命令：<input id="copyDanmakuComment" type="button" value="将扣弹幕命令复制到剪贴板" onclick="copyDanmakuComment()" data-clipboard-target="#commentTextDiv" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuCommentOnRoom" type="button" value="（爱马仕官方LV生放送ROOM类型专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnRoom()" data-clipboard-target="#commentTextOnRoomDiv" /> <br />
-							
+													<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuStopComment" type="button" value="强制终止输出弹幕数组命令" onclick="copyDanmakuStopComment()" data-clipboard-target="#commentStopTextDiv" /> <br /><br />
 							2.加载复制回来的数组：<br /> 
 							<textarea id="jsonTextarea" rows="8" cols="40"></textarea><br />
 							<input type="button" value="加载" onclick="object2xml()" />
@@ -91,6 +91,7 @@
 		<!-- 读取到的XML文本预览： -->
 		<textarea id="commentTextDiv" style="opacity:0;height: 0px;"></textarea>
 		<textarea id="commentTextOnRoomDiv" style="opacity:0;height: 0px;"></textarea>
+		<textarea id="commentStopTextDiv" style="opacity:0;height: 0px;"></textarea>
 		
 		<!-- 几乎不用的 -->
 		<!-- <div class="center-block">
@@ -119,6 +120,7 @@
 		<script src="./util/jquery-2.1.1.min.js"></script>
 		<script src="./util/clipboard.min.js"></script>
 		<script src="./util/danmaku-comment-text.js"></script>
+		<script src="./util/danmaku-comment-stop-text.js"></script>
 		<script src="./util/idolmaster-namahaishin-comment-text.js"></script>
 		
 		<!-- JQ -->
@@ -136,6 +138,7 @@
 		<script>
 			document.getElementById("commentTextDiv").innerHTML = window.commentText;
 			document.getElementById("commentTextOnRoomDiv").innerHTML = window.commentTextOnRoom;
+			document.getElementById("commentStopTextDiv").innerHTML = window.commentStopText;
 			
 			if (window.localStorage.getItem('useSetting') != null) {
 				getUseSetting();
@@ -1470,6 +1473,19 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 			// 复制相关命令到剪贴板
 			function copyDanmakuCommentOnRoom() {
 				var clipboard = new Clipboard("#copyDanmakuCommentOnRoom");
+				
+				clipboard.on('success', function(e) {
+					console.log(e);
+				})
+				
+				clipboard.on('error', function(e) {
+					console.log(e);
+				})
+			}
+			
+			// 复制相关命令到剪贴板
+			function copyDanmakuStopComment() {
+				var clipboard = new Clipboard("#copyDanmakuStopComment");
 				
 				clipboard.on('success', function(e) {
 					console.log(e);
