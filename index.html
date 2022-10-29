@@ -14,7 +14,7 @@
 		<div>
 			主线一：<br />
 			搬运LV生放送源：推荐<a href="https://www.bilibili.com/read/cv937578" target="_blank">MINYAMI</a><br />
-			补充说明：十分推荐安装配套的CHROME插件，还有加入系统变量。<br />
+			补充说明：十分推荐安装其配套的CHROME插件。<br />
 		</div>
 		<br />
 		<hr />
@@ -38,14 +38,14 @@
 				普通弹幕时间轴偏移调整<input type="text" id="startTimeAdjust" name="startTimeAdjust" style="width: 30px;" value="0" />秒（-1提前1秒 1推后1秒）<br />
 				普通弹幕滚动速度调整<input type="text" id="danmakuSpeedAdjust" name="danmakuSpeedAdjust" style="width: 30px;" value="1" />秒（-1加快1秒 1减慢1秒）<br />
 				是否启用普通弹幕颜色<input type="checkbox" id="useAssColors" name="useAssColors" value="0" checked />（默认使用 不使用全部黑框白字处理）<br />
-				是否区分普通弹幕会员与非会员<input type="checkbox" id="difficultVIP" name="difficultVIP" value="0" />（默认不使用 没必要）<br />
-				是否过滤非会员<input type="checkbox" id="filterOutsider" name="filterOutsider" value="0" />（默认不使用 没必要）<br />
+				是否区分普通弹幕会员与非会员<input type="checkbox" id="difficultVIP" name="difficultVIP" value="0" />（默认不使用 区别非会员弹幕会变半透明）<br />
+				是否过滤非会员<input type="checkbox" id="filterOutsider" name="filterOutsider" value="0" />（默认不使用 过滤非会员弹幕直接消失）<br />
 				是否使用速度算法<input type="checkbox" id="useSpeedA" name="useSpeedA" value="0" />（默认不使用 使用算法滚动速度会平均点）<br />
-				手动添加运营弹幕ID<input type="text" id="manualAddOfficeId" name="manualAddOfficeId" style="width: 300px;" value="" />（默认空 用于无法识别或添加特定ID 输入多个用英文的逗号,隔开 如 illumination,gezi,jiaozi,megumi）（只能靠重新刷新页面取消之前手动输过的ID）<br />
-				屏蔽过滤关键词<input type="text" id="filterKeywords" name="filterKeywords" style="width: 300px;" value="" />（默认空 输入多个用英文的逗号,隔开 如上）<br />
+				手动添加运营弹幕ID<input type="text" id="manualAddOfficeId" name="manualAddOfficeId" style="width: 300px;" value="" />（默认空 用于无法识别或添加特定ID 输入多个用英文的逗号,隔开 如 114514,33-4,im@s）（只能靠重新刷新页面取消之前手动输过的ID）<br />
+				屏蔽过滤关键词<input type="text" id="filterKeywords" name="filterKeywords" style="width: 300px;" value="" />（默认空 输入多个用英文的逗号,隔开 如narumiruna,るなーん,なるみるな）<br />
 				
 				<br />
-				使用方式一的数组数据过大，用自建的TXT转XML，再用方式二转ASS：<input type="file" onchange="uploadBigTXT(this)" id="txtFile" /><input type="button" value="加载" onclick="bigTXT2xml()"><input type="button" value="将其保存为XML" onclick="json2xmlSave()"><br />
+				如使用方式一的数组数据过大导致浏览器奔溃，请自行新建UTF-8编码的TXT，用此功能导入TXT转XML，再用方式二转ASS：<input type="file" onchange="uploadBigTXT(this)" id="txtFile" /><input type="button" value="加载" onclick="bigTXT2xml()"><input type="button" value="将其保存为XML" onclick="json2xmlSave()"><br />
 			</div>
 			
 			<br />
@@ -58,7 +58,7 @@
 					<br />
 						<div>
 							1.复制命令：<input id="copyDanmakuComment" type="button" value="将扣弹幕命令复制到剪贴板" onclick="copyDanmakuComment()" data-clipboard-target="#commentTextDiv" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuCommentOnRoom" type="button" value="（爱马仕官方LV生放送ROOM类型专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnRoom()" data-clipboard-target="#commentTextOnRoomDiv" /> <br />
-													<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuStopComment" type="button" value="强制终止输出弹幕数组命令复制到剪贴板" onclick="copyDanmakuStopComment()" data-clipboard-target="#commentStopTextDiv" /> <br /><br />
+													<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuStopComment" type="button" value="强制终止直接输出弹幕数组命令复制到剪贴板" onclick="copyDanmakuStopComment()" data-clipboard-target="#commentStopTextDiv" /> <br /><br />
 							2.加载复制回来的数组：<br /> 
 							<textarea id="jsonTextarea" rows="8" cols="40"></textarea><br />
 							<input type="button" value="加载" onclick="object2xml()" />
@@ -69,7 +69,7 @@
 				</div>
 				<br />
 				<div class="divBord">
-					方式二：通过NCV等工具下载回来的XML扣弹幕<br />
+					方式二：通过NCV等工具下载回来的XML转ASS<br />
 
 					<br />
 					1.通过XML加载弹幕：<input type="file" onchange="upload(this)" id="xmlFile" /><br />
@@ -542,6 +542,10 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 				jsonObject.sort(sort_vpos);
 				
 				jsonObject.map((item, index) => {
+					// 处理undefined
+					if (item["__text"] == undefined) {
+						return true;
+					}
 					// 处理NG
 					var frist = item["__text"].substring(0,1);
 					if(item["__text"] == "※ NGコメントです ※") {
