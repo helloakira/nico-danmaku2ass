@@ -57,8 +57,8 @@
 					教程：<a href="浏览器扣弹幕使用说明/扣LV弹幕教程.html" target="_blank">扣LV弹幕教程</a>&nbsp;&nbsp;<a href="浏览器扣弹幕使用说明/扣SO弹幕教程.html" target="_blank">扣SO弹幕教程</a><br />
 					<br />
 						<div>
-							1.复制命令：<input id="copyDanmakuComment" type="button" value="将扣弹幕命令复制到剪贴板" onclick="copyDanmakuComment()" data-clipboard-target="#commentTextDiv" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuCommentOnRoom" type="button" value="（爱马仕官方LV生放送ROOM类型专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnRoom()" data-clipboard-target="#commentTextOnRoomDiv" /> <br />
-													<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuStopComment" type="button" value="强制终止直接输出弹幕数组命令复制到剪贴板" onclick="copyDanmakuStopComment()" data-clipboard-target="#commentStopTextDiv" /> <br /><br />
+							1.复制命令：<input id="copyDanmakuComment" type="button" value="将扣弹幕命令复制到剪贴板" onclick="copyDanmakuComment()" data-clipboard-target="#commentTextDiv" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuCommentOnRoom" type="button" value="（爱马仕官方LV生放送ROOM类型专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnRoom()" data-clipboard-target="#commentTextOnRoomDiv" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuCommentOnNicochannel" type="button" value="（希水汐nicochannel专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnNicochannel()" data-clipboard-target="#commentTextOnNicochannelDiv" /> <br />
+													<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuStopComment" type="button" value="强制终止直接输出弹幕数组命令复制到剪贴板" onclick="copyDanmakuStopComment()" data-clipboard-target="#commentStopTextDiv" />  <br /><br />
 							2.加载复制回来的数组：<br /> 
 							<textarea id="jsonTextarea" rows="8" cols="40"></textarea><br />
 							<input type="button" value="加载" onclick="object2xml()" />
@@ -91,6 +91,7 @@
 		<!-- 读取到的XML文本预览： -->
 		<textarea id="commentTextDiv" style="opacity:0;height: 0px;"></textarea>
 		<textarea id="commentTextOnRoomDiv" style="opacity:0;height: 0px;"></textarea>
+		<textarea id="commentTextOnNicochannelDiv" style="opacity:0;height: 0px;"></textarea>
 		<textarea id="commentStopTextDiv" style="opacity:0;height: 0px;"></textarea>
 		
 		<!-- 几乎不用的 -->
@@ -122,6 +123,7 @@
 		<script src="./util/danmaku-comment-text.js"></script>
 		<script src="./util/danmaku-comment-stop-text.js"></script>
 		<script src="./util/idolmaster-namahaishin-comment-text.js"></script>
+		<script src="./util/nicochannel-comment-text.js"></script>
 		
 		<!-- JQ -->
 		<script>
@@ -138,6 +140,7 @@
 		<script>
 			document.getElementById("commentTextDiv").innerHTML = window.commentText;
 			document.getElementById("commentTextOnRoomDiv").innerHTML = window.commentTextOnRoom;
+			document.getElementById("commentTextOnNicochannelDiv").innerHTML = window.commentTextOnNicochannel;
 			document.getElementById("commentStopTextDiv").innerHTML = window.commentStopText;
 			
 			if (window.localStorage.getItem('useSetting') != null) {
@@ -368,8 +371,7 @@
 				return addOfficeIdArray;
 				
 			}
-			
-			
+
 			// 全局数组接受遍历得到的数据生成JSON
 			var newArray = [];
 			// 全局字符串得到数据生成ASS
@@ -667,8 +669,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 										var oneBg = `Dialogue: 5,${startTimeQ},${endTime},Anketo,,0,0,0,,{\\an5\\p1\\3c&HFFFFFF&\\bord6\\1c&HD5A07B&\\1a&H78&\\pos(${X[i]},${Y[j]})}${bg}\n`
 										
 										// 处理多余空行
-										var text_16 = textArrayQ[i].replace(/[^\x00-\xff]/g,"$&\x01").replace(/.{16}\x01?/g,"$&\\N").replace(/\x01/g,"");
-										var oneText = `Dialogue: 5,${startTimeQ},${endTime},Anketo,,0,0,0,,{\\an5\\bord0\\1c&HFFFFFF&\\pos(${X[i]},${Y[j]})}${text_16}\n`;
+										var text_20 = textArrayQ[i].replace(/[^\x00-\xff]/g,"$&\x01").replace(/.{20}\x01?/g,"$&\\N").replace(/\x01/g,"");
+										var oneText = `Dialogue: 5,${startTimeQ},${endTime},Anketo,,0,0,0,,{\\an5\\bord0\\1c&HFFFFFF&\\pos(${X[i]},${Y[j]})}${text_20}\n`;
 										
 										var oneResultBg = `Dialogue: 5,${startTimeR},${endTime},Anketo,,0,0,0,,{\\an5\\p1\\bord0\\1c&H3E2E2A&\\pos(${X[i]},${Y[j]+Math.floor(bgHeight/2)})}${resultBg}\n`
 										var oneResultext = `Dialogue: 5,${startTimeR},${endTime},Anketo,,0,0,0,,{\\an5\\bord0\\1c&H76FAF8&\\pos(${X[i]},${Y[j]+Math.floor(bgHeight/2)})}${ parseInt(textArrayR[i])/10 }%\n`;
@@ -743,8 +745,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 										
 										var oneBg = `Dialogue: 5,${startTimeQ},${endTime},Anketo,,0,0,0,,{\\an5\\p1\\3c&HFFFFFF&\\bord4\\1c&HD5A07B&\\1a&H78&\\pos(${X[i]},${Y[j]})}${bg}\n`
 										// 多余的空行
-										var text_16 = textArrayQ[num-1].replace(/[^\x00-\xff]/g,"$&\x01").replace(/.{16}\x01?/g,"$&\\N").replace(/\x01/g,"");
-										var oneText = `Dialogue: 5,${startTimeQ},${endTime},Anketo,,0,0,0,,{\\fs${parseInt(danmakuSize/4*3)}\\an5\\bord0\\1c&HFFFFFF&\\pos(${X[i]},${Y[j]})}${text_16}\n`;
+										var text_20 = textArrayQ[num-1].replace(/[^\x00-\xff]/g,"$&\x01").replace(/.{20}\x01?/g,"$&\\N").replace(/\x01/g,"");
+										var oneText = `Dialogue: 5,${startTimeQ},${endTime},Anketo,,0,0,0,,{\\fs${parseInt(danmakuSize/4*3)}\\an5\\bord0\\1c&HFFFFFF&\\pos(${X[i]},${Y[j]})}${text_20}\n`;
 										
 										var oneResultBg = `Dialogue: 5,${startTimeR},${endTime},Anketo,,0,0,0,,{\\an5\\p1\\bord0\\1c&H3E2E2A&\\pos(${X[i]},${Y[j]+Math.floor(bgHeight/2)})}${resultBg}\n`
 										var oneResultext = `Dialogue: 5,${startTimeR},${endTime},Anketo,,0,0,0,,{\\fs${parseInt(danmakuSize/4*3)}\\an5\\bord0\\1c&H76FAF8&\\pos(${X[i]},${Y[j]+Math.floor(bgHeight/2)})}${ parseInt(textArrayR[num-1])/10 }%\n`;
@@ -1477,6 +1479,19 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 			// 复制相关命令到剪贴板
 			function copyDanmakuCommentOnRoom() {
 				var clipboard = new Clipboard("#copyDanmakuCommentOnRoom");
+				
+				clipboard.on('success', function(e) {
+					console.log(e);
+				})
+				
+				clipboard.on('error', function(e) {
+					console.log(e);
+				})
+			}
+			
+			// 复制相关命令到剪贴板
+			function copyDanmakuCommentOnNicochannel() {
+				var clipboard = new Clipboard("#copyDanmakuCommentOnNicochannel");
 				
 				clipboard.on('success', function(e) {
 					console.log(e);

@@ -87,6 +87,21 @@ youtubeChatArray.map((item, index)=>{
 
 var fs = require("fs");
 
+var fObj = {
+	"thread": {
+		"resultcode": 0,
+		"thread": "youtube",
+		"last_res": newNicoArray.length,
+		"ticket": "0x473ad00",
+		"revision": 1,
+		"server_time": 114514,
+		"lv": "lv114514",
+		"title": "其它",
+	}
+}
+
+newNicoArray.unshift(fObj);
+
 fs.writeFile("./test.txt", JSON.stringify(newNicoArray), (err, data) => {
     if (err) throw err;
 });
