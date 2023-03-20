@@ -23,6 +23,7 @@ xhrGetId.onreadystatechange = function() {
 // 获取token
 var xhrGetToken = new XMLHttpRequest()
 xhrGetToken.open('GET', "https://nfc-api.nicochannel.jp/fc/video_pages/"+sm+"/comments_user_token")
+xhrGetId.setRequestHeader('fc_use_device', "null")
 xhrGetToken.send()
 xhrGetToken.onreadystatechange = function() {
 	if (xhrGetToken.readyState === 4 && xhrGetToken.status === 200) {
