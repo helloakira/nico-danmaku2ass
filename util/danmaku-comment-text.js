@@ -147,10 +147,8 @@ function onMessage_comment(evt)
 			frist +=1
 		}
 	}
-	
-	if (is_disconnect>0) {
-		get_comment_timer();
-	}
+
+	get_comment_timer();
 }
 
 function onError_comment(evt)
@@ -175,8 +173,7 @@ function jsonToXml_RegExp(text) {
 	var reg4 = new RegExp("'","g"); // '
 	var reg5 = new RegExp('"',"g"); // "
 	
-	text_RegExp = text.replace(reg1, "").replace(reg2, "").replace(reg3, "").replace(reg4, "").replace(reg5, '');
-	// text_RegExp = text.replace(reg1, "&lt;").replace(reg2, "&gt;").replace(reg3, "&amp;").replace(reg4, "&apos;").replace(reg5, '&quot;');
+	text_RegExp = text.replace(reg1, "").replace(reg2, "").replace(reg3, "").replace(reg4, "").replace(reg5, "");
 	return text_RegExp;
 }
 
@@ -207,9 +204,11 @@ function get_comment_timer() {
 			// 获取lv号&获取标题
 			LV = document.URL.split("/").slice(-1)[0];
 			fristObj["thread"]["lv"] = LV.indexOf("?")>-1 ? LV.substr(0, LV.indexOf("?")) : LV;
-			fristObj["thread"]["title"] = jsonToXml_RegExp(document.title);
+			
+			var reg6 = new RegExp('\/',"g"); // /
+			var reg7 = new RegExp(':',"g"); // :
+			fristObj["thread"]["title"] = jsonToXml_RegExp(document.title.replace(reg6, "_").replace(reg7, "_"));
 			danmakuChatArray.unshift(fristObj);
-
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制下行---");
 			console.log(danmakuChatArray);
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制上行---");
