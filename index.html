@@ -195,7 +195,7 @@
 				var apiJsonText = bigTXT;
 				apiArray = eval(bigTXT);
 				
-				if (apiJsonText.indexOf("ping") == -1 && apiJsonText.indexOf("content")) {
+				if (apiJsonText.indexOf("content")) {
 					// 获取标题
 					nicoLv = apiArray[0].thread.lv;
 					nicoTitle = apiArray[0].thread.title;
@@ -262,12 +262,11 @@
 				// 获取文本框内容
 				var apiJsonText = document.getElementById('jsonTextarea').value;
 				apiArray = eval(apiJsonText);
-				
-				if (apiJsonText.indexOf("ping") == -1 && apiJsonText.indexOf("content")) {
+
+				if (apiJsonText.indexOf("content")) {
 					// 获取标题
 					nicoLv = apiArray[0].thread.lv;
 					nicoTitle = apiArray[0].thread.title;
-
 					document.getElementById("nicoTitle").innerHTML = `${nicoLv} - ${nicoTitle}`;
 					
 					// 处理thread
