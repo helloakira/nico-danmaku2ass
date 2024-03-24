@@ -147,7 +147,9 @@ function onMessage_comment(evt)
 		}
 	}
 	
-	get_comment_timer();
+	if (is_disconnect>0) {
+		get_comment_timer();
+	}
 }
 
 function onError_comment(evt)
@@ -183,9 +185,7 @@ function duplicate_removal() {
 	// 获取lv号&获取标题
 	LV = document.URL.split("/").slice(-1)[0];
 	fristObj["thread"]["lv"] = LV.indexOf("?")>-1 ? LV.substr(0, LV.indexOf("?")) : LV;
-	var reg6 = new RegExp('\/',"g"); // /
-	var reg7 = new RegExp(':',"g"); // :
-	fristObj["thread"]["title"] = jsonToXml_RegExp(document.title.replace(reg6, "_").replace(reg7, "_"));
+	fristObj["thread"]["title"] = jsonToXml_RegExp(document.title);
 	uniqueDanmakuChatArray.unshift(fristObj);
 	
 	console.log(uniqueDanmakuChatArray);

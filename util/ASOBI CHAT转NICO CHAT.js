@@ -38,10 +38,11 @@ asobiChatArray.map((item, index)=>{
 			"date": item.time,
 			"date_usec": item.time,
 			"mail": item.data.color,
-			"user_id": "asobi_user",
+			"user_id": item.data.userName,
 			"premium": 1,
 			"anonymity": 1,
-			"content": item.data.comment[0]
+			"content": item.data.comment[0],
+			"type": item.data.type
 		}
 	}
 	
