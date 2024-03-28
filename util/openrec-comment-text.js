@@ -55,6 +55,7 @@ function get_comment_timer() {
 					} else {
 						for (let i = 0; i < data.length; i++) {
 							openrecCommentArray.push(data[i]);
+							openrecCommentArray.push(data[i]);
 						}
 						posted_at = data.slice(-1)[0].posted_at;
 						let successText = posted_at + " 成功获取了" + data.length + "条评论";
@@ -67,13 +68,32 @@ function get_comment_timer() {
 		// 找到NO1
 		if (finish == 1) {
 			clearInterval(getCommentTimer);
+			// 排序
+			nicoCommentArray.sort(sort_chat_no);
+			// 去重
+			let duplicateArray = [];
+			for (var i = 0; i < nicoCommentArray.length; i++) {
+				if (i == 0) {
+					duplicateArray.push(nicoCommentArray[i]);
+					continue;
+				}
+				if (nicoCommentArray[i].chat.no !== nicoCommentArray[i-1].chat.no) {
+					duplicateArray.push(nicoCommentArray[i]);
+				}
+			}
+			nicoCommentArray = duplicateArray;
 			// 获取lv号&获取标题
-			openchats_to_nicochats()
+			openchats_to_nicochats();
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制下行---");
 			console.log(nicoCommentArray);
 			console.log("---扣取弹幕完毕，请按右键-'Copy object'复制上行---");
 		}
 	}, 2000)
+}
+
+// 按no排序
+function sort_chat_no(a, b) {
+	return a.chat.no - b.chat.no;
 }
 
 function openchats_to_nicochats() {
