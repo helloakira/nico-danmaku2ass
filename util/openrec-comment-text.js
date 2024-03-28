@@ -101,7 +101,7 @@ function openchats_to_nicochats() {
 		"thread": {
 			"resultcode": 0,
 			"thread": "离我的美月远点",
-			"last_res": "离我的紫月远点",
+			"last_res": "离你的紫月近点",
 			"ticket": "离我的华月远点",
 			"revision": 1,
 			"server_time": 114514,
