@@ -200,7 +200,7 @@
 				// 获取文本框内容
 				var apiJsonText = bigTXT;
 				apiArray = eval(bigTXT);
-				
+
 				if (apiJsonText.indexOf("ping") == -1 && apiJsonText.indexOf("content")) {
 					// 获取标题
 					nicoLv = apiArray[0].thread.lv;
@@ -602,29 +602,23 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 							textQ = textArray[2];
 							// 从第三个开始赋值数组 ["Yes!","No..."]
 							textArrayQ = textArray.slice(3);
-							
-							// 含双引号修复
-							let hasDoubleQuotation = [];
-							for (let i = 0; i < textArrayQ.length; i++) {
-								if (textArrayQ[i].indexOf('"') != -1 && (textArrayQ[i].indexOf('"') == textArrayQ[i].lastIndexOf('"')) ) {
-									hasDoubleQuotation.push(i);
-								}
-							}
 
-							if (hasDoubleQuotation.length >=2) {
-								for (let i = 0; i < hasDoubleQuotation.length; i+=2) {
-									
-									textArrayQ.splice(hasDoubleQuotation[i],hasDoubleQuotation[i+1]+1,textArrayQ.slice(hasDoubleQuotation[i],hasDoubleQuotation[i+1]+1).join(" ").replace(/"/g,'').replace(/,/g,''));
-									console.log(textArrayQ);
+							// 含双引号修复
+							if (textArrayQ[0].indexOf('"') == 0 && textArrayQ[1].indexOf('"') != 0) {
+								
+								let double_textArrayQ = [];
+								for (var i = 0; i < textArrayQ.length; i+=2) {
+									double_textArrayQ.push(textArrayQ[i]+textArrayQ[i+1])
 								}
+								textArrayQ = double_textArrayQ;
 							}
+							console.log(textArrayQ)
 						}
 						
 						// 找投票结束
 						if (textArray[0] == "/vote" && textArray[1] == "showresult") {
 							// 从第三个开始赋值数组 [438,562]
 							textArrayR = textArray.slice(3);
-							
 							// 处理问卷调查出结果时间
 							var startSeconds = (item["_vpos"]/100).toFixed(2);
 							var startSecondsArray = startSeconds.toString().split(".");
@@ -1243,7 +1237,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 				})	// 句子循环
 				
 				// 新数组排序
-				newArray.sort(sortStart);
+				newArray.sort(sort_start);
 				
 				// 输出弹幕
 				juziOffice = "Comment: 0,0:00:00.00,0:00:00.00,Office,,0,0,0,,运营弹幕\n" + juziOffice + "Comment: 0,0:00:00.00,0:00:00.00,Office,,0,0,0,,\n";
@@ -1378,7 +1372,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 			}
 			
 			// 排序
-			function sortStart(a, b) {
+			function sort_start(a, b) {
 				return a.start - b.start
 			}
 			
