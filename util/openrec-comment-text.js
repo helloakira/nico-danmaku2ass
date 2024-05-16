@@ -55,7 +55,6 @@ function get_comment_timer() {
 					} else {
 						for (let i = 0; i < data.length; i++) {
 							openrecCommentArray.push(data[i]);
-							openrecCommentArray.push(data[i]);
 						}
 						posted_at = data.slice(-1)[0].posted_at;
 						let successText = posted_at + " 成功获取了" + data.length + "条评论";
@@ -77,7 +76,7 @@ function get_comment_timer() {
 					duplicateArray.push(nicoCommentArray[i]);
 					continue;
 				}
-				if (nicoCommentArray[i].chat.no !== nicoCommentArray[i-1].chat.no) {
+				if ( (nicoCommentArray[i].chat.no !== nicoCommentArray[i-1].chat.no) && (nicoCommentArray[i].chat.content !== nicoCommentArray[i-1].chat.content) ) {
 					duplicateArray.push(nicoCommentArray[i]);
 				}
 			}
