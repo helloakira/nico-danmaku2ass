@@ -1,8 +1,8 @@
-var uri_comment = "wss://replay.asobistore.jp/shinycolors_6th_bb_re2_ch1/archive";
+var uri_comment = "wss://replay.asobistore.jp/shinycolors_6th_ff_re2_ch1/archive";
 
 var ws = new WebSocket(uri_comment)
 
-var commentArray = [];
+var asobiChatArray = [];
 
 var finish = 0;
 
@@ -19,7 +19,7 @@ ws.onmessage = function(evt) {
 		let cArray = JSON.parse(evt.data).archive;
 		if (cArray.length > 0) {
 			for (let i = 0; i < cArray.length; i++) {
-				commentArray.push(cArray[i]);
+				asobiChatArray.push(cArray[i]);
 			}
 		}
 	}
@@ -34,14 +34,48 @@ var time_5 = 0;
 function get_comment_timer() {
 	let getCommentTimer = setInterval(function() {
 		if (finish != 1) {
-			commentArray.sort((a, b)=> {return a.playtime - b.playtime});
+			asobiChatArray.sort((a, b)=> {return a.playtime - b.playtime});
 			time_5 += 5;
 			ws.send(`{"func":"archive-get","time": "${time_5}"}`);
 		}
 		
 		if (time_5 > 14400 || finish == 1) {
 			clearInterval(getCommentTimer);
-			console.log(commentArray);
+			console.log(asobiChatArray);
+			let newNicoArray = [];
+			asobiChatArray.map((item, index)=>{
+				let newNicoItem = {
+					"chat": {
+						"thread": "asobi",
+						"no": index+1,
+						"vpos": parseInt(item.playtime.toFixed(2)*100),
+						"date": item.time,
+						"date_usec": item.time,
+						"mail": item.data.color,
+						"user_id": item.data.userName,
+						"premium": 1,
+						"anonymity": 1,
+						"content": item.data.comment[0],
+						"type": item.data.type
+					}
+				}
+				newNicoArray.push(newNicoItem);
+			});
+			
+			var fObj = {
+				"thread": {
+					"resultcode": 0,
+					"thread": "asobi",
+					"last_res": newNicoArray.length,
+					"ticket": "0x473ad00",
+					"revision": 1,
+					"server_time": 114514,
+					"lv": "lv114514",
+					"title": "其它",
+				}
+			}
+			newNicoArray.unshift(fObj);
+			console.log(newNicoArray);
 		}
 		
 	}, 200);
