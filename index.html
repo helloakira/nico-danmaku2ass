@@ -53,13 +53,13 @@
 			<div>
 				<div class="divBord">
 					方式一：通过浏览器开发工具扣弹幕（推荐用CHROME）<br />
-					补充说明：无需转发定向代理无需登录NICO账号，只需在对应已完结生放送的LV页面输入对应命令就能扣。能应对大多LV生放送与SO视频。<br />
-					教程：<a href="浏览器扣弹幕使用说明/扣LV弹幕教程.html" target="_blank">扣LV弹幕教程</a>&nbsp;&nbsp;<a href="浏览器扣弹幕使用说明/扣SO弹幕教程.html" target="_blank">扣SO弹幕教程</a><br />
+					补充说明：NICO更新，该功能已无法使用，请用<a href="https://www.posite-c.com/uploader/ncv/" target="_blank">NCV</a>，下载回来XML，再用方式二转ASS。<br />
+					<!-- 教程：<a href="浏览器扣弹幕使用说明/扣LV弹幕教程.html" target="_blank">扣LV弹幕教程</a>&nbsp;&nbsp;<a href="浏览器扣弹幕使用说明/扣SO弹幕教程.html" target="_blank">扣SO弹幕教程</a><br /> -->
 					<br />
 						<div>
-							1.复制命令：<input id="copyDanmakuComment" type="button" value="将扣弹幕命令复制到剪贴板" onclick="copyDanmakuComment()" data-clipboard-target="#commentTextDiv" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuCommentOnRoom" type="button" value="（爱马仕官方LV生放送ROOM类型专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnRoom()" data-clipboard-target="#commentTextOnRoomDiv" />
+							1.复制命令：<!-- <input id="copyDanmakuComment" type="button" value="将扣弹幕命令复制到剪贴板" onclick="copyDanmakuComment()" data-clipboard-target="#commentTextDiv" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuCommentOnRoom" type="button" value="（爱马仕官方LV生放送ROOM类型专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnRoom()" data-clipboard-target="#commentTextOnRoomDiv" />
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuCommentOnNicochannel" type="button" value="（希水汐nicochannel专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnNicochannel()" data-clipboard-target="#commentTextOnNicochannelDiv" />
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuCommentOnOpenrec" type="button" value="（openrec专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnOpenrec()" data-clipboard-target="#commentTextOnOpenrecDiv" />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --><input id="copyDanmakuCommentOnOpenrec" type="button" value="（openrec专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnOpenrec()" data-clipboard-target="#commentTextOnOpenrecDiv" />
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuCommentOnZan_live" type="button" value="（zan-live专用命令）将扣弹幕命令复制到剪贴板" onclick="copyDanmakuCommentOnZan_live()" data-clipboard-target="#commentTextOnZan_liveDiv" />
 							<br />
 													<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="copyDanmakuStopComment" type="button" value="强制终止直接输出弹幕数组命令复制到剪贴板" onclick="copyDanmakuStopComment()" data-clipboard-target="#commentStopTextDiv" />  <br /><br />
@@ -364,8 +364,8 @@
 
 					var premium = item["_premium"];
 
-					if (premium == "3") {
-						if ( text.indexOf("/trialpanel") == -1 && text.indexOf("/nicoad") == -1 && text.indexOf("/spi") == -1 && text.indexOf("/gift") == -1 && text.indexOf("/info") == -1 && text.indexOf("/commentlock") == -1 ) {
+					if (premium == "2") {
+						if ( text.indexOf("/trialpanel") == -1 && text.indexOf("/nicoad") == -1 && text.indexOf("/spi") == -1 && text.indexOf("/gift") == -1 && text.indexOf("/info") == -1 && text.indexOf("/commentlock") == -1) {
 							if ( (addOfficeIdArray.indexOf(id) == -1) ) {
 								addOfficeIdArray.push(id);
 							}
@@ -577,6 +577,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 					
 					// 初始化运营弹幕框
 					OfficeBgHeight = 32;
+					
+					// 调整运营弹幕时间
+					if (item["_date"] == 0 && item["_date_usec"] == 0 && item["_premium"] == "2") {
+						item["_vpos"] = parseInt(item["_vpos"])*100
+					}
+					
 					
 					// 处理开始时间
 					var startSeconds = (item["_vpos"]/100).toFixed(2);
@@ -800,6 +806,10 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 							};
 							
 							if (item["__text"].indexOf("/info") != -1) {
+								return true;
+							};
+							
+							if (item["__text"].indexOf("ニコニ広告しました") != -1) {
 								return true;
 							};
 							
