@@ -564,6 +564,10 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 					if(item["__text"] == "※ NGコメントです ※") {
 						return true;
 					}
+					
+					if(item["__text"] == "【アンケート終了】") {
+						return true;
+					}
 
 					// 处理没有VSOP的
 					if (item.hasOwnProperty("_vpos") == false) {
@@ -592,14 +596,44 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 					var endSeconds = (item["_vpos"]/100+10).toFixed(2);
 					var endSecondsArray = endSeconds.toString().split(".");
 					var endTime = timeFormat(parseInt(endSecondsArray[0]))+"."+endSecondsArray[1];
-
+					
 					// 找运营ID 只有运营ID才发投票
 					if(officeIds.includes(item["_user_id"])) {
+						// 处理新版弹幕
+						// 【アンケート開始】大将の花火はどうだった？
+						// 1：忘れられない！
+						// 2：忘れました…
+						
+						//【アンケート結果】大将の花火はどうだった？
+						// 1：25.3% 忘れられない！
+						// 2：74.7% 忘れました…
+						
+						let reg1 = new RegExp(/\n　/,"g");
+						let reg2 = new RegExp(/[0-9]：/,"g");
+						
+						if (item["__text"].indexOf("【アンケート開始】") != -1) {
+							item["__text"] = item["__text"].replace(/【アンケート開始】/g,'/vote start ');
+							item["__text"] = item["__text"].replace(reg1,' ');
+							item["__text"] = item["__text"].replace(reg2,'');
+						}
+
+						if (item["__text"].indexOf("【アンケート結果】") != -1) {
+							let result_array = item["__text"].split("\n　").slice(1);
+							item["__text"] = "/vote showresult per"
+							for (var i = 0; i < result_array.length; i++) {
+								let percent = result_array[i].indexOf("%");
+								let per = parseFloat(result_array[i].substring(2,percent))*10;
+								item["__text"] += " "+per;
+							}
+							
+						}
+						console.log(item["__text"]);
+						
+						
 						// 分割运营文本 如下
 						// 投票开始 /vote start 和気あいあいとプレイしていた？ Yes! No...
 						// 投票结束 /vote showresult per 438 562
-						var textArray = item["__text"].split(" ");
-						
+						var textArray = item["__text"].split(" ");	
 						// console.log(textArray);
 						
 						// 找投票开始
