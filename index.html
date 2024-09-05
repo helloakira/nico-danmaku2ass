@@ -627,8 +627,6 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 							}
 							
 						}
-						console.log(item["__text"]);
-						
 						
 						// 分割运营文本 如下
 						// 投票开始 /vote start 和気あいあいとプレイしていた？ Yes! No...
@@ -657,7 +655,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 								}
 								textArrayQ = double_textArrayQ;
 							}
-							console.log(textArrayQ)
+							// console.log(textArrayQ)
 						}
 						
 						// 找投票结束
@@ -857,73 +855,32 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 
 						if (frist == "<") {
 							var aAnchor = parseToDOM(item["__text"]);;
-							var uTextContent = aAnchor[0].childNodes[0].textContent;
+							var uTextContent = aAnchor[0].childNodes[0].textContent.replace(/\n/g,'\\N').replace(/http/g,"\\N{\\u1\\1c&HFFCF00&}http");
 							
-							var juziBg = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\p1\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&H000000&\\1a&H78&}${officeBg}\n`;
-							var juziText = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&HFFCF00&\\u1\\fsp0}${uTextContent}\n`;
+							var arr = uTextContent.split("\\N");
 							
-							var textLength = Math.ceil(strlen(uTextContent)/2);
+							OfficeBgHeight = OfficeBgHeight + OfficeBgHeight*(arr.length-1);
+							officeBg = `m 0 0 l ${videoWidth+20} 0 l ${videoWidth+20} ${OfficeBgHeight} l 0 ${OfficeBgHeight}`;
 							
-							
-							if ( textLength >= 60 ) {
-								var text = uTextContent.replace(/[^\x00-\xff]/g,"$&\x01").replace(/.{96}\x01?/g,"$&\\N").replace(/\x01/g,"");
-
-								var n=0;
-								var arr=[];
-
-								while(text.indexOf('\\N',n) != -1){
-									var m=text.indexOf('\\N',n);
-									n=m+1;
-									arr.push(m);
-								}
-								
-								OfficeBgHeight = OfficeBgHeight + Math.max(OfficeBgHeight * (arr.length),OfficeBgHeight) ;
-								officeBg = `m 0 0 l ${videoWidth+20} 0 l ${videoWidth+20} ${OfficeBgHeight} l 0 ${OfficeBgHeight}`;
-								
-								juziBg = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\p1\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&H000000&\\1a&H78&}${officeBg}\n`;
-								juziText = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\fscx90\\fscy90\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&HFFCF00&\\u1\\fsp0}${text}\n`;
-							}
+							juziBg = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\p1\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&H000000&\\1a&H78&}${officeBg}\n`;
+							juziText = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\fscx90\\fscy90\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&HFFFFFF&}${uTextContent}\n`;
 							
 							juziOffice += juziBg+juziText;
-							
+
 							return true;
 
 						}
 
 						// 普通运营文本
-						var text = item["__text"].replace(/\n/g,'\\N');
-
-						var juziBg = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\p1\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&H000000&\\1a&H78&}${officeBg}\n`;
-						var juziText = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&HFFFFFF&\\fsp0}${text}\n`;
-
-						if (item["_premium"] == "7" && item.hasOwnProperty("_name")) {
-							var premium7Name = item["_name"];
-							
-							juziText = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&HFFFFFF&\\fsp0}${premium7Name}：${text}\n`;
-						}
-
-						var textLength = Math.ceil(strlen(item["__text"])/2);
+						var text = item["__text"].replace(/\n/g,'\\N').replace(/http/g,"\\N{\\u1\\1c&HFFCF00&}http");
 						
+						var arr = text.split("\\N");
 						
+						OfficeBgHeight = OfficeBgHeight + OfficeBgHeight*(arr.length-1);
+						officeBg = `m 0 0 l ${videoWidth+20} 0 l ${videoWidth+20} ${OfficeBgHeight} l 0 ${OfficeBgHeight}`;
 						
-						if ( textLength >= 60 ) {
-							var text = text.replace(/[^\x00-\xff]/g,"$&\x01").replace(/.{96}\x01?/g,"$&\\N").replace(/\x01/g,"");
-
-							var n=0;
-							var arr=[];
-
-							while(text.indexOf('\\N',n) != -1){
-								var m=text.indexOf('\\N',n);
-								n=m+1;
-								arr.push(m);
-							}
-							
-							OfficeBgHeight = OfficeBgHeight + Math.max(OfficeBgHeight * (arr.length),OfficeBgHeight);
-							officeBg = `m 0 0 l ${videoWidth+20} 0 l ${videoWidth+20} ${OfficeBgHeight} l 0 ${OfficeBgHeight}`;
-
-							juziBg = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\p1\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&H000000&\\1a&H78&}${officeBg}\n`;
-							juziText = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\fscx90\\fscy90\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&HFFFFFF&}${text}\n`;
-						}
+						juziBg = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\p1\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&H000000&\\1a&H78&}${officeBg}\n`;
+						juziText = `Dialogue: 5,${startTime},${endTime},Office,,0,0,0,,{\\an5\\fscx90\\fscy90\\pos(${videoWidth/2},${Math.floor(OfficeBgHeight/2)})\\bord0\\1c&HFFFFFF&}${text}\n`;
 						
 						juziOffice += juziBg+juziText;
 						
