@@ -900,6 +900,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text`
 						var color = "ffffff";
 						var colorASS = "HFFFFFF";
 						if(item.hasOwnProperty("_mail")) {
+							// mail=" smallblack gothic"
+							if (item["_mail"].indexOf(" small") != -1) {
+								item["_mail"] = item["_mail"].replace(/ small/g, " small ");
+								console.log(item["_mail"]);
+							}
+							
 							// orange4 solid ???
 							var findColorArray = item["_mail"].split(" ");
 							
