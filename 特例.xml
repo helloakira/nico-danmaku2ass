@@ -2,7 +2,7 @@
 <NiconamaComment xmlns:NCV="http://posite-c.jp/niconamacommentviewer/common/" xmlns="http://posite-c.jp/niconamacommentviewer/commentlog/">
 	<IsShowedAllRoomComments>false</IsShowedAllRoomComments>
 	<LiveNum>346065866</LiveNum>
-	<ElapsedTime>03:16:59.9878521</ElapsedTime>
+	<ElapsedTime>03:12:21.0335485</ElapsedTime>
 	<LiveInfo>
 		<LiveTitle>近藤玲奈Official Channel ～れいれいの近況報告～ 8通目</LiveTitle>
 		<Broadcaster>株式会社USEN</Broadcaster>
@@ -17,15 +17,15 @@
 	</LiveInfo>
 	<PlayerStatus>
 		<Stream>
-			<WatchCount>923</WatchCount>
+			<WatchCount>920</WatchCount>
 			<CommentCount>2246</CommentCount>
 			<OwnerId />
 			<OwnerName>株式会社USEN</OwnerName>
 		</Stream>
 		<User>
-			<MyNickname>マジア</MyNickname>
+			<MyNickname>アキラ</MyNickname>
 			<IsPremium>false</IsPremium>
-			<MyUserId>70032134</MyUserId>
+			<MyUserId>60352024</MyUserId>
 		</User>
 	</PlayerStatus>
 	<Rooms />
@@ -64,11 +64,11 @@
 		<chat anonymity="1" date="1730282337" date_usec="772451000" no="32" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="23520">兎にも角にも駆けつけました</chat>
 		<chat anonymity="1" date="1730282341" date_usec="739827000" no="33" thread="" premium="1" user_id="a:ZTduyGql-t1_UA6D" vpos="23959">Xの舞見たい</chat>
 		<chat anonymity="1" date="1730282342" date_usec="875409000" no="34" thread="" premium="1" user_id="a:4s6NRAfpr1f9fOYU" vpos="23020">今なら鼻をかむだけで泣ける</chat>
-		<chat date="1730282347" date_usec="490963000" thread="" premium="2" user_id="" vpos="247">こんばんは～</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="247">こんばんは～</chat>
 		<chat anonymity="1" date="1730282356" date_usec="796321000" no="35" thread="" premium="1" user_id="a:sENE0aFLPWjxe1wZ" vpos="25169">こんばんは～～</chat>
 		<chat anonymity="1" date="1730282357" date_usec="51280000" mail=" 　_live" no="36" thread="" premium="1" user_id="a:OThlj3x_IDyE9oFY" vpos="25449">こんばんは</chat>
 		<chat anonymity="1" date="1730282358" date_usec="394539000" no="37" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="25256">こんばんは～</chat>
-		<chat date="1730282358" date_usec="812246000" thread="" premium="2" user_id="" vpos="258">みなさま！！お久しぶりです！！</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="258">みなさま！！お久しぶりです！！</chat>
 		<chat anonymity="1" date="1730282359" date_usec="793970000" no="38" thread="" premium="1" user_id="a:qxH_v2utLZOjc3QP" vpos="25731">こんばんはー！！！！</chat>
 		<chat anonymity="1" date="1730282361" date_usec="186890000" mail=" 　_live" no="39" thread="" premium="1" user_id="a:kVxL4JAtVY8IcbqH" vpos="25679">こんばんは〜</chat>
 		<chat anonymity="1" date="1730282361" date_usec="910411000" no="40" thread="" premium="1" user_id="a:l1_C2TxZG4BC64yF" vpos="25957">こんばんは</chat>
@@ -97,7 +97,7 @@
 		<chat anonymity="1" date="1730282379" date_usec="988161000" no="63" thread="" user_id="a:bCK1A4yeIt9KiSCE" vpos="27353">こんばんは〜！</chat>
 		<chat anonymity="1" date="1730282380" date_usec="134223000" no="64" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="27759">お元気でしたか？</chat>
 		<chat anonymity="1" date="1730282382" date_usec="863196000" no="65" thread="" premium="1" user_id="a:sENE0aFLPWjxe1wZ" vpos="27775">おかえり　ただいま！</chat>
-		<chat date="1730282387" date_usec="592144000" thread="" premium="2" user_id="" vpos="287">みんなに会いたかったぴょん</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="287">みんなに会いたかったぴょん</chat>
 		<chat anonymity="1" date="1730282389" date_usec="758376000" mail=" 　_live" no="66" thread="" user_id="a:6JBjzlFMWspyAk8S" vpos="27860">こんばんは〜</chat>
 		<chat anonymity="1" date="1730282390" date_usec="479034000" mail=" 　_live" no="67" thread="" user_id="a:fCwvZ1YaySK5CLic" vpos="28730">こんばんは</chat>
 		<chat anonymity="1" date="1730282394" date_usec="839759000" no="68" thread="" premium="1" user_id="a:Eacw0s3AXh-cAJJQ" vpos="29261">大丈夫？枠1時間半で足りる？</chat>
@@ -122,7 +122,7 @@
 		<chat anonymity="1" date="1730282416" date_usec="551595000" no="87" thread="" premium="1" user_id="a:XQEmIhQf2t_MTYSu" vpos="30393">ぴょん</chat>
 		<chat date="1730282417" date_usec="547998000" name="GMS" no="88" thread="" premium="1" user_id="685452" vpos="31509">ぴょん</chat>
 		<chat anonymity="1" date="1730282422" date_usec="741047000" no="89" thread="" premium="1" user_id="a:qxH_v2utLZOjc3QP" vpos="32027">90分！？</chat>
-		<chat date="1730282426" date_usec="451927000" thread="" premium="2" user_id="" vpos="326">まもなくはじまります！</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="326">まもなくはじまります！</chat>
 		<chat anonymity="1" date="1730282431" date_usec="338616000" mail=" 　_live" no="90" thread="" premium="1" user_id="a:Cp89FWERWSE43bsx" vpos="31931">こんなハワイみたいなBGMでしたか</chat>
 		<chat anonymity="1" date="1730282431" date_usec="485378000" mail=" 　_live" no="91" thread="" premium="1" user_id="a:OThlj3x_IDyE9oFY" vpos="32888">そうかハロウィンか</chat>
 		<chat anonymity="1" date="1730282437" date_usec="703082000" no="92" thread="" user_id="a:8toBw_o2dCUMwBzD" vpos="33518">ドキドキ</chat>
@@ -194,7 +194,7 @@
 		<chat date="1730282511" date_usec="45431000" name="GMS" no="158" thread="" premium="1" user_id="685452" vpos="40858">ハロウィンコスプレ予想してた</chat>
 		<chat anonymity="1" date="1730282512" date_usec="711177000" no="159" thread="" premium="1" user_id="a:sENE0aFLPWjxe1wZ" vpos="40756">うさ耳が足りない</chat>
 		<chat anonymity="1" date="1730282512" date_usec="799407000" no="160" thread="" premium="1" user_id="a:4s6NRAfpr1f9fOYU" vpos="40023">家族を人質に取られてまして</chat>
-		<chat date="1730282513" date_usec="258524000" thread="" premium="2" user_id="" vpos="413">しらばっくれいれい</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="413">しらばっくれいれい</chat>
 		<chat anonymity="1" date="1730282514" date_usec="724694000" mail=" 　_live" no="161" thread="" premium="1" user_id="a:tXI-Cl4gQZuLMYVf" vpos="40979">ぴょんぴょんしてきた</chat>
 		<chat anonymity="1" date="1730282514" date_usec="897214000" mail=" 　_live" no="162" thread="" premium="1" user_id="a:Cp89FWERWSE43bsx" vpos="40291">急にすんとした始まり方w</chat>
 		<chat anonymity="1" date="1730282515" date_usec="424527000" no="163" thread="" user_id="a:btn5KuHGeydckSJ_" vpos="41062">2023年が続いている</chat>
@@ -232,7 +232,7 @@
 		<chat anonymity="1" date="1730282551" date_usec="229227000" no="195" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="44869">黒歴史番組</chat>
 		<chat anonymity="1" date="1730282551" date_usec="595367000" no="196" thread="" user_id="a:JGyf_UAh4uIdOEYC" vpos="44940">黒歴史かー</chat>
 		<chat date="1730282551" date_usec="868974000" name="岩沢" no="197" thread="" user_id="39599977" vpos="44628">白歴史です</chat>
-		<chat date="1730282552" date_usec="624604000" thread="" premium="2" user_id="" vpos="45824">/nicoad {"version":"1","totalAdPoint":12600,"message":"はっこうさんが1000ptニコニ広告しました"}</chat>
+		<chat date="1730282552" date_usec="624604000" thread="" premium="2" user_id="" vpos="45824">/uadpoint 0 12600 "はっこうさんが1000ptニコニ広告しました"</chat>
 		<chat anonymity="1" date="1730282555" date_usec="673024000" no="198" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="45146">やってた〜</chat>
 		<chat anonymity="1" date="1730282556" date_usec="770594000" mail=" 　_live" no="199" thread="" premium="1" user_id="a:kVxL4JAtVY8IcbqH" vpos="45200">懐かしいわね</chat>
 		<chat anonymity="1" date="1730282558" date_usec="352824000" mail=" 　_live" no="200" thread="" premium="1" user_id="a:Cp89FWERWSE43bsx" vpos="44636">運営コメントに「みんなに会いたかったぴょん」って書いてあったじゃんw</chat>
@@ -300,7 +300,7 @@
 		<chat date="1730282612" date_usec="906335000" name="岩沢" no="262" thread="" user_id="39599977" vpos="50730">おかえり～ゆるっといこう</chat>
 		<chat anonymity="1" date="1730282613" date_usec="111399000" no="263" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="50726">BIG LOVE♡</chat>
 		<chat anonymity="1" date="1730282615" date_usec="74908000" no="264" thread="" premium="1" user_id="a:qxH_v2utLZOjc3QP" vpos="51261">？</chat>
-		<chat date="1730282615" date_usec="641182000" thread="" premium="2" user_id="" vpos="52141">/nicoad {"version":"1","totalAdPoint":13200,"message":"【広告貢献5位】タカヒナさんが600ptニコニ広告しました"}</chat>
+		<chat date="1730282615" date_usec="641182000" thread="" premium="2" user_id="" vpos="52141">/uadpoint 0 13200 "【広告貢献5位】タカヒナさんが600ptニコニ広告しました"</chat>
 		<chat anonymity="1" date="1730282616" date_usec="555760000" mail=" 　_live" no="265" thread="" premium="1" user_id="a:OThlj3x_IDyE9oFY" vpos="51396">ファニーラッキー</chat>
 		<chat anonymity="1" date="1730282621" date_usec="248188000" no="266" thread="" premium="1" user_id="a:PvgDcWYAR-bKawaU" vpos="51095">おかえりーーー</chat>
 		<chat anonymity="1" date="1730282622" date_usec="116286000" no="267" thread="" premium="1" user_id="a:qxH_v2utLZOjc3QP" vpos="51965">元気って事？</chat>
@@ -333,7 +333,7 @@
 		<chat anonymity="1" date="1730282682" date_usec="426927000" no="294" thread="" premium="1" user_id="a:Eacw0s3AXh-cAJJQ" vpos="58018">気が向いたらｗ</chat>
 		<chat anonymity="1" date="1730282683" date_usec="678955000" no="295" thread="" user_id="a:RpnEVPvDNTQvAW_s" vpos="57107">NGかぁ</chat>
 		<chat anonymity="1" date="1730282683" date_usec="899972000" no="296" thread="" premium="1" user_id="a:qxH_v2utLZOjc3QP" vpos="58148">気が向いたら！？</chat>
-		<chat date="1730282685" date_usec="124824000" thread="" premium="2" user_id="" vpos="585">八か月ぶりのバタバタでした</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="585">八か月ぶりのバタバタでした</chat>
 		<chat anonymity="1" date="1730282686" date_usec="479759000" no="297" thread="" premium="1" user_id="a:lvR6JvI7brIy__qp" vpos="58431">待ってますｗ</chat>
 		<chat date="1730282688" date_usec="497949000" name="でぽ" no="298" thread="" premium="1" user_id="11263690" vpos="58426">気が向いたらｗ</chat>
 		<chat date="1730282689" date_usec="55629000" name="岩沢" no="299" thread="" user_id="39599977" vpos="58345">毎日気が向いてほしい</chat>
@@ -387,7 +387,7 @@
 		<chat date="1730282741" date_usec="969759000" name="いずしー" no="347" thread="" user_id="32780624" vpos="63958">見えてる！</chat>
 		<chat anonymity="1" date="1730282742" date_usec="539241000" mail=" 　_live" no="348" thread="" premium="1" user_id="a:OThlj3x_IDyE9oFY" vpos="64000">きれい</chat>
 		<chat anonymity="1" date="1730282743" date_usec="577852000" no="349" thread="" user_id="a:JGyf_UAh4uIdOEYC" vpos="64144">わーーーーーー！</chat>
-		<chat date="1730282745" date_usec="203277000" thread="" premium="2" user_id="" vpos="64703">/nicoad {"version":"1","totalAdPoint":14300,"message":"【広告貢献4位】あるむまいんさんが1100ptニコニ広告しました"}</chat>
+		<chat date="1730282745" date_usec="203277000" thread="" premium="2" user_id="" vpos="64703">/uadpoint 0 14300 "【広告貢献4位】あるむまいんさんが1100ptニコニ広告しました"</chat>
 		<chat date="1730282746" date_usec="358899000" name="いずしー" no="350" thread="" user_id="32780624" vpos="64396">８８８８８８８８８８８８８８８８８８８８８８８８８８８８８８８８８</chat>
 		<chat anonymity="1" date="1730282746" date_usec="457191000" no="351" thread="" user_id="a:zSwr7eIc8Zwh9DcV" vpos="64419">お花～～～</chat>
 		<chat anonymity="1" date="1730282746" date_usec="640257000" no="352" thread="" premium="1" user_id="a:5Do3_X-uAuNmutE0" vpos="64383">888888</chat>
@@ -743,7 +743,7 @@
 		<chat anonymity="1" date="1730283636" date_usec="840035000" mail=" 　_live" no="702" thread="" user_id="a:yhMvdchKZ5O_zwH_" vpos="152951">やったね</chat>
 		<chat date="1730283637" date_usec="133128000" name="いずしー" no="703" thread="" user_id="32780624" vpos="153474">イベント何着てくか決まった？</chat>
 		<chat anonymity="1" date="1730283641" date_usec="786064000" no="704" thread="" premium="1" user_id="a:EoDpYu1BcFde7UYC" vpos="153052">タイムテーブルお願いします</chat>
-		<chat date="1730283649" date_usec="746896000" thread="" premium="2" user_id="" vpos="1549">↓イベントが楽しみすぎて発売日忘れた人</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="1549">↓イベントが楽しみすぎて発売日忘れた人</chat>
 		<chat anonymity="1" date="1730283655" date_usec="632300000" mail=" 　_live" no="705" thread="" user_id="a:bTLQ4LcE64ClmyE-" vpos="155078">ずきん</chat>
 		<chat anonymity="1" date="1730283656" date_usec="139755000" no="706" thread="" user_id="a:4ZIWwdmR6SfEt3ze" vpos="155104">水着はありますか？</chat>
 		<chat anonymity="1" date="1730283656" date_usec="708331000" mail=" 　_live" no="707" thread="" user_id="a:yhMvdchKZ5O_zwH_" vpos="154945">めっちゃ可愛いですね</chat>
@@ -821,7 +821,7 @@
 		<chat anonymity="1" date="1730283779" date_usec="979973000" no="779" thread="" premium="1" user_id="a:qxH_v2utLZOjc3QP" vpos="167556">おるんかー？</chat>
 		<chat anonymity="1" date="1730283781" date_usec="626001000" mail=" 　_live" no="780" thread="" premium="1" user_id="a:akhxmwn8Ge-0Acz6" vpos="167940">はい</chat>
 		<chat anonymity="1" date="1730283781" date_usec="756516000" no="781" thread="" user_id="a:JGyf_UAh4uIdOEYC" vpos="167957">いるんか？</chat>
-		<chat date="1730283781" date_usec="940561000" thread="" premium="2" user_id="" vpos="1681">/perm 発売イベント応募はコチラ！急げ！ https://teket.jp/186/40054</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="1681">発売イベント応募はコチラ！急げ！ https://teket.jp/186/40054</chat>
 		<chat anonymity="1" date="1730283783" date_usec="202118000" no="782" thread="" user_id="a:4ZIWwdmR6SfEt3ze" vpos="167890">そんな人おらんやろー</chat>
 		<chat anonymity="1" date="1730283783" date_usec="717246000" no="783" thread="" premium="1" user_id="a:SqZtOYNjy7hVrcrw" vpos="167618">いるの？</chat>
 		<chat anonymity="1" date="1730283784" date_usec="376015000" no="784" thread="" premium="1" user_id="a:l1_C2TxZG4BC64yF" vpos="168204">いるか？</chat>
@@ -946,7 +946,7 @@
 		<chat anonymity="1" date="1730283923" date_usec="444174000" no="903" thread="" user_id="a:giwdEAY2S2iN2E2P" vpos="181920">それはそれでw</chat>
 		<chat anonymity="1" date="1730283924" date_usec="243601000" no="904" thread="" user_id="a:ypm4PkBu_dN-L04_" vpos="182166">話せないなら話さなければいいとされているからな（アイコンタクト的な意味で）</chat>
 		<chat anonymity="1" date="1730283927" date_usec="75059000" no="905" thread="" user_id="a:PnEai2J0ptzV3uJ5" vpos="182213">フリップ芸は草</chat>
-		<chat date="1730283927" date_usec="815339000" thread="" premium="2" user_id="" vpos="1827">恥ずかしがりやさんにもやさしいイベント</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="1827">恥ずかしがりやさんにもやさしいイベント</chat>
 		<chat date="1730283927" date_usec="816276000" name="GMS" no="906" thread="" premium="1" user_id="685452" vpos="182536">カンペ読み上げればいいんでしたっけ？</chat>
 		<chat anonymity="1" date="1730283928" date_usec="441683000" no="907" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="181729">対話拒否は新しい</chat>
 		<chat anonymity="1" date="1730283929" date_usec="993640000" no="908" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="182592">時間が気になります</chat>
@@ -979,7 +979,7 @@
 		<chat date="1730283964" date_usec="577587000" mail=" 　_live" name="木田太郎" no="935" thread="" premium="1" user_id="289349" vpos="186085">いまきたばっかりー</chat>
 		<chat date="1730283966" date_usec="25346000" name="いずしー" no="936" thread="" user_id="32780624" vpos="186363">い　つ　も　の</chat>
 		<chat anonymity="1" date="1730283969" date_usec="912666000" no="937" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="186422">はえー</chat>
-		<chat date="1730283971" date_usec="930300000" thread="" premium="2" user_id="" vpos="1871">メールは全部れいれいに届けておりますので・・・！</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="1871">メールは全部れいれいに届けておりますので・・・！</chat>
 		<chat date="1730283975" date_usec="167729000" name="いずしー" no="938" thread="" user_id="32780624" vpos="187277">カレンダーまじでめでたい</chat>
 		<chat anonymity="1" date="1730283981" date_usec="60770000" no="939" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="187846">学園祭も行くぜえー</chat>
 		<chat anonymity="1" date="1730283981" date_usec="776520000" no="940" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="187776">8888888</chat>
@@ -992,7 +992,7 @@
 		<chat anonymity="1" date="1730283996" date_usec="597669000" no="947" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="189093">ポチれ！</chat>
 		<chat anonymity="1" date="1730283997" date_usec="364475000" no="948" thread="" premium="1" user_id="a:EoDpYu1BcFde7UYC" vpos="188614">来年の生誕イベント無いの？</chat>
 		<chat anonymity="1" date="1730284002" date_usec="858975000" no="949" thread="" premium="1" user_id="a:XQEmIhQf2t_MTYSu" vpos="189021">いますぐ！</chat>
-		<chat date="1730284003" date_usec="785705000" thread="" premium="2" user_id="" vpos="1903">/perm イベント申込はコチラ！ https://teket.jp/186/40054</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="1903">イベント申込はコチラ！ https://teket.jp/186/40054</chat>
 		<chat date="1730284007" date_usec="896825000" name="いずしー" no="950" thread="" user_id="32780624" vpos="190548">天才</chat>
 		<chat anonymity="1" date="1730284008" date_usec="531844000" no="951" thread="" user_id="a:JGyf_UAh4uIdOEYC" vpos="190631">👆👆</chat>
 		<chat anonymity="1" date="1730284012" date_usec="536893000" no="952" thread="" premium="1" user_id="a:L1PiFdl86P81t5aE" vpos="190799">今週日曜日もイベント頑張って</chat>
@@ -1048,7 +1048,7 @@
 		<chat anonymity="1" date="1730284070" date_usec="592918000" no="1002" thread="" user_id="a:4ZIWwdmR6SfEt3ze" vpos="196542">なんだってー</chat>
 		<chat date="1730284071" date_usec="463891000" name="いずしー" no="1003" thread="" user_id="32780624" vpos="196907">道行く人に</chat>
 		<chat anonymity="1" date="1730284072" date_usec="759803000" no="1004" thread="" premium="1" user_id="a:4s6NRAfpr1f9fOYU" vpos="197025">マネージャーSさんのインスタもください</chat>
-		<chat date="1730284074" date_usec="900264000" thread="" premium="2" user_id="" vpos="1974">/perm れいれいはインスタをやっているぞ https://www.instagram.com/reireishot_017/</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="1974">れいれいはインスタをやっているぞ https://www.instagram.com/reireishot_017/</chat>
 		<chat anonymity="1" date="1730284075" date_usec="935830000" no="1005" thread="" premium="1" user_id="a:SqZtOYNjy7hVrcrw" vpos="196845">こわい</chat>
 		<chat date="1730284076" date_usec="727715000" name="GMS" no="1006" thread="" premium="1" user_id="685452" vpos="197429">アイマスのライングループには教えてる</chat>
 		<chat anonymity="1" date="1730284077" date_usec="99015000" no="1007" thread="" premium="1" user_id="a:PvgDcWYAR-bKawaU" vpos="196692">Sさん本当にありがとう</chat>
@@ -1234,7 +1234,7 @@
 		<chat anonymity="1" date="1730284237" date_usec="924928000" no="1187" thread="" user_id="a:4ZIWwdmR6SfEt3ze" vpos="213273">転生したらみかこしの息子だった件</chat>
 		<chat anonymity="1" date="1730284238" date_usec="460276000" no="1188" thread="" user_id="a:PnEai2J0ptzV3uJ5" vpos="213350">転生w</chat>
 		<chat anonymity="1" date="1730284238" date_usec="473490000" no="1189" thread="" user_id="a:btn5KuHGeydckSJ_" vpos="213436">第二子おめでとう</chat>
-		<chat date="1730284238" date_usec="486850000" thread="" premium="2" user_id="" vpos="2138">/perm トークショーチケット申し込みはコチラから！ https://eplus.jp/sf/detail/4192720001-P0030001</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="2138">トークショーチケット申し込みはコチラから！ https://eplus.jp/sf/detail/4192720001-P0030001</chat>
 		<chat date="1730284241" date_usec="179321000" name="いずしー" no="1190" thread="" user_id="32780624" vpos="213879">イヤリングもね</chat>
 		<chat anonymity="1" date="1730284241" date_usec="918622000" no="1191" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="213622">みかこしの子</chat>
 		<chat anonymity="1" date="1730284253" date_usec="931044000" no="1192" thread="" premium="1" user_id="a:qxH_v2utLZOjc3QP" vpos="214951">発想が悪きオタクのそれすぎる</chat>
@@ -1301,7 +1301,7 @@
 		<chat date="1730284343" date_usec="279477000" name="でぽ" no="1253" thread="" premium="1" user_id="11263690" vpos="223873">カウント0切られたｗ</chat>
 		<chat anonymity="1" date="1730284343" date_usec="550898000" no="1254" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="223235">ぬるっと移行しない.......！？</chat>
 		<chat anonymity="1" date="1730284344" date_usec="536415000" no="1255" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="223883">ヌルっと切り替えじゃないだと</chat>
-		<chat date="1730284344" date_usec="991631000" thread="" premium="2" user_id="" vpos="2244">しばしお待ちを・・・</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="2244">しばしお待ちを・・・</chat>
 		<chat date="1730284345" date_usec="293883000" name="りゅー" no="1256" thread="" premium="1" user_id="1212944" vpos="224274">入会しました</chat>
 		<chat anonymity="1" date="1730284348" date_usec="594425000" no="1257" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="224615">ずっと会員だよ…</chat>
 		<chat anonymity="1" date="1730284351" date_usec="156497000" no="1258" thread="" user_id="a:giwdEAY2S2iN2E2P" vpos="224694">ぶった切り</chat>
@@ -1324,7 +1324,7 @@
 		<chat date="1730284390" date_usec="976345000" name="GMS" no="1275" thread="" premium="1" user_id="685452" vpos="228854">鼻かみにいってるのでしばしお待ち下さい</chat>
 		<chat anonymity="1" date="1730284401" date_usec="764292000" no="1276" thread="" premium="1" user_id="a:EoDpYu1BcFde7UYC" vpos="229052">来月未定って番組終わるの？</chat>
 		<chat date="1730284404" date_usec="968216000" name="いずしー" no="1277" thread="" user_id="32780624" vpos="230255">今のうちにトイレ行っとくか</chat>
-		<chat date="1730284407" date_usec="194745000" thread="" premium="2" user_id="" vpos="2307">おまたせしました！再開します～！</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="2307">おまたせしました！再開します～！</chat>
 		<chat anonymity="1" date="1730284410" date_usec="388008000" no="1278" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="230470">ころもちゃん「鼻かみにいってます」</chat>
 		<chat anonymity="1" date="1730284418" date_usec="819063000" no="1279" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="231481">やったぜ</chat>
 		<chat anonymity="1" date="1730284426" date_usec="503089000" no="1280" thread="" user_id="a:RpnEVPvDNTQvAW_s" vpos="231318">はい！！</chat>
@@ -1623,7 +1623,7 @@
 		<chat anonymity="1" date="1730285076" date_usec="781957000" no="1573" thread="" user_id="a:ypm4PkBu_dN-L04_" vpos="297414">顔しか見てないから紙見てない</chat>
 		<chat anonymity="1" date="1730285076" date_usec="805635000" no="1574" thread="" premium="1" user_id="a:XQEmIhQf2t_MTYSu" vpos="296388">見てないです</chat>
 		<chat anonymity="1" date="1730285077" date_usec="313698000" no="1575" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="297329">なにもみてないぞ！</chat>
-		<chat date="1730285079" date_usec="134924000" thread="" premium="2" user_id="" vpos="2979">あ</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="2979">あ</chat>
 		<chat anonymity="1" date="1730285079" date_usec="548396000" no="1576" thread="" user_id="a:RpnEVPvDNTQvAW_s" vpos="296665">あっ…</chat>
 		<chat date="1730285081" date_usec="412856000" name="でぽ" no="1577" thread="" premium="1" user_id="11263690" vpos="297521">何も見てないよ</chat>
 		<chat anonymity="1" date="1730285082" date_usec="661536000" no="1578" thread="" premium="1" user_id="a:sENE0aFLPWjxe1wZ" vpos="297751">なにもみてない</chat>
@@ -1640,7 +1640,7 @@
 		<chat anonymity="1" date="1730285097" date_usec="519314000" no="1589" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="299349">あ</chat>
 		<chat anonymity="1" date="1730285110" date_usec="818709000" no="1590" thread="" premium="1" user_id="a:0zGsdky2KVVrsjPX" vpos="300832">ｗｗｗｗｗ</chat>
 		<chat anonymity="1" date="1730285115" date_usec="865020000" no="1591" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="301019">忘れろビームして呉れたら忘れる</chat>
-		<chat date="1730285118" date_usec="77279000" thread="" premium="2" user_id="" vpos="3018">みんなの順位を予想しよう！というコーナーです</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3018">みんなの順位を予想しよう！というコーナーです</chat>
 		<chat date="1730285122" date_usec="112174000" name="いずしー" no="1592" thread="" user_id="32780624" vpos="301969">わくわく</chat>
 		<chat anonymity="1" date="1730285122" date_usec="378014000" no="1593" thread="" premium="1" user_id="a:l1_C2TxZG4BC64yF" vpos="301998">えｗ</chat>
 		<chat anonymity="1" date="1730285124" date_usec="57030000" no="1594" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="301287">なるほどね</chat>
@@ -1653,7 +1653,7 @@
 		<chat anonymity="1" date="1730285163" date_usec="58010000" no="1601" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="306059">ほね</chat>
 		<chat anonymity="1" date="1730285166" date_usec="723950000" no="1602" thread="" premium="1" user_id="a:KTR_zAIOjRXnpFFw" vpos="306152">キツネキョンシーやね</chat>
 		<chat anonymity="1" date="1730285167" date_usec="908451000" no="1603" thread="" premium="1" user_id="a:XQEmIhQf2t_MTYSu" vpos="305499">ふむふむ</chat>
-		<chat date="1730285168" date_usec="266798000" thread="" premium="2" user_id="" vpos="3068">/vote new 【アンケート開始】ハロウィンの仮装といえば？
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3068">【アンケート開始】ハロウィンの仮装といえば？
 　1：黒猫
 　2：おばけ
 　3：かぼちゃ
@@ -1669,7 +1669,7 @@
 		<chat anonymity="1" date="1730285218" date_usec="690172000" no="1612" thread="" user_id="a:JGyf_UAh4uIdOEYC" vpos="311649">ドキドキ . . .</chat>
 		<chat anonymity="1" date="1730285222" date_usec="73198000" no="1613" thread="" user_id="a:ypm4PkBu_dN-L04_" vpos="311950">ついでに1位の仮装してくれるんですか？</chat>
 		<chat date="1730285229" date_usec="611438000" name="いずしー" no="1614" thread="" user_id="32780624" vpos="312720">あ～～～～</chat>
-		<chat date="1730285230" date_usec="704089000" thread="" premium="2" user_id="" vpos="3130">/vote new 【アンケート結果】ハロウィンの仮装といえば？
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3130">【アンケート結果】ハロウィンの仮装といえば？
 　1：16.4% 黒猫
 　2：20.9% おばけ
 　3：20.9% かぼちゃ
@@ -1690,7 +1690,7 @@
 		<chat anonymity="1" date="1730285247" date_usec="710736000" no="1628" thread="" user_id="a:PnEai2J0ptzV3uJ5" vpos="314280">天使は？</chat>
 		<chat anonymity="1" date="1730285248" date_usec="146208000" no="1629" thread="" premium="1" user_id="a:7UQoM94QN4wCjbzE" vpos="314401">道立</chat>
 		<chat anonymity="1" date="1730285248" date_usec="646552000" no="1630" thread="" premium="1" user_id="a:0zGsdky2KVVrsjPX" vpos="314598">同率ｗｗｗ</chat>
-		<chat date="1730285249" date_usec="877473000" thread="" premium="2" user_id="" vpos="3149">/vote new 【アンケート終了】</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3149">【アンケート終了】</chat>
 		<chat anonymity="1" date="1730285250" date_usec="507488000" no="1631" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="314807">どう予想したのかな？</chat>
 		<chat anonymity="1" date="1730285253" date_usec="32597000" no="1632" thread="" premium="1" user_id="a:7UQoM94QN4wCjbzE" vpos="314894">同率</chat>
 		<chat anonymity="1" date="1730285254" date_usec="584361000" no="1633" thread="" user_id="a:giwdEAY2S2iN2E2P" vpos="315028">まさかの同率w</chat>
@@ -1779,7 +1779,7 @@
 		<chat anonymity="1" date="1730285422" date_usec="503537000" no="1716" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="331850">マジでやる側は難しそう</chat>
 		<chat anonymity="1" date="1730285427" date_usec="865713000" no="1717" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="332216">スタッフさんもうマイク付けよう</chat>
 		<chat anonymity="1" date="1730285428" date_usec="56313000" no="1718" thread="" premium="1" user_id="a:EbZSOxbP-Dst5h1g" vpos="332349">結果はああああああこちらあああああああ</chat>
-		<chat date="1730285433" date_usec="882874000" thread="" premium="2" user_id="" vpos="3333">げんばはこんらんしている！</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3333">げんばはこんらんしている！</chat>
 		<chat anonymity="1" date="1730285434" date_usec="765298000" no="1719" thread="" premium="1" user_id="a:dpHialRv2ndcpVFr" vpos="333066">黒猫は4だぞ</chat>
 		<chat anonymity="1" date="1730285439" date_usec="3632000" no="1720" thread="" premium="1" user_id="a:u91lsDrsi2eIDWyx" vpos="333649">↑</chat>
 		<chat anonymity="1" date="1730285441" date_usec="255727000" no="1721" thread="" premium="1" user_id="a:qxH_v2utLZOjc3QP" vpos="333874">大混乱だよ！</chat>
@@ -1863,7 +1863,7 @@
 		<chat anonymity="1" date="1730285560" date_usec="359780000" no="1799" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="345793">ろーす</chat>
 		<chat anonymity="1" date="1730285561" date_usec="395111000" no="1800" thread="" premium="1" user_id="a:4s6NRAfpr1f9fOYU" vpos="345883">手羽先</chat>
 		<chat date="1730285563" date_usec="360451000" name="いずしー" no="1801" thread="" user_id="32780624" vpos="346094">カルビんまだいける？</chat>
-		<chat date="1730285563" date_usec="999651000" thread="" premium="2" user_id="" vpos="3463">/vote new 【アンケート開始】好きな焼肉の部位は？
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3463">【アンケート開始】好きな焼肉の部位は？
 　1：牛タン
 　2：ハラミ
 　3：カルビ
@@ -1903,7 +1903,7 @@
 		<chat date="1730285610" date_usec="567727000" name="いずしー" no="1834" thread="" user_id="32780624" vpos="350815">来月１１２９の日あるよ</chat>
 		<chat anonymity="1" date="1730285612" date_usec="410080000" no="1835" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="350840">元気でますよね</chat>
 		<chat anonymity="1" date="1730285615" date_usec="352996000" no="1836" thread="" user_id="a:RpnEVPvDNTQvAW_s" vpos="350234">焼肉屋のキムチ好き</chat>
-		<chat date="1730285617" date_usec="152835000" thread="" premium="2" user_id="" vpos="3517">/vote new 【アンケート結果】好きな焼肉の部位は？
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3517">【アンケート結果】好きな焼肉の部位は？
 　1：44% 牛タン
 　2：17.3% ハラミ
 　3：28% カルビ
@@ -1916,7 +1916,7 @@
 		<chat anonymity="1" date="1730285634" date_usec="53626000" no="1842" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="353004">ルール理解ニキありがとう</chat>
 		<chat anonymity="1" date="1730285635" date_usec="192430000" no="1843" thread="" user_id="a:PnEai2J0ptzV3uJ5" vpos="353019">タン多いw</chat>
 		<chat anonymity="1" date="1730285635" date_usec="887648000" no="1844" thread="" premium="1" user_id="a:sENE0aFLPWjxe1wZ" vpos="353326">タン圧倒的</chat>
-		<chat date="1730285636" date_usec="638015000" thread="" premium="2" user_id="" vpos="3536">/vote new 【アンケート終了】</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3536">【アンケート終了】</chat>
 		<chat anonymity="1" date="1730285641" date_usec="848296000" no="1845" thread="" premium="1" user_id="a:0zGsdky2KVVrsjPX" vpos="353918">タンつよい</chat>
 		<chat anonymity="1" date="1730285644" date_usec="267253000" no="1846" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="353854">1，3，2，4</chat>
 		<chat anonymity="1" date="1730285651" date_usec="698420000" no="1847" thread="" premium="1" user_id="a:L1PiFdl86P81t5aE" vpos="354707">タンタカタン</chat>
@@ -2011,7 +2011,7 @@
 		<chat anonymity="1" date="1730285798" date_usec="163701000" no="1936" thread="" premium="1" user_id="a:qfQEgXrRQ0PpqqKk" vpos="368585">草</chat>
 		<chat anonymity="1" date="1730285799" date_usec="63704000" no="1937" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="368885">なんとなくわかった！！！</chat>
 		<chat anonymity="1" date="1730285799" date_usec="846836000" no="1938" thread="" premium="1" user_id="a:qxH_v2utLZOjc3QP" vpos="369733">これはこれでおもろい</chat>
-		<chat date="1730285801" date_usec="120305000" thread="" premium="2" user_id="" vpos="3701">ゲームが理解できたところでお時間に…</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3701">ゲームが理解できたところでお時間に…</chat>
 		<chat anonymity="1" date="1730285803" date_usec="93457000" no="1939" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="369908">封印されそうな企画</chat>
 		<chat anonymity="1" date="1730285806" date_usec="556141000" no="1940" thread="" premium="1" user_id="a:qfQEgXrRQ0PpqqKk" vpos="369416">おもろいなあ</chat>
 		<chat anonymity="1" date="1730285808" date_usec="444596000" no="1941" thread="" premium="1" user_id="a:SqZtOYNjy7hVrcrw" vpos="370432">88888888</chat>
@@ -2055,7 +2055,7 @@
 		<chat anonymity="1" date="1730285843" date_usec="744900000" no="1979" thread="" premium="1" user_id="a:D6I1Z-Ev0v1szQ9X" vpos="373888">X!</chat>
 		<chat anonymity="1" date="1730285845" date_usec="296890000" no="1980" thread="" premium="1" user_id="a:qxH_v2utLZOjc3QP" vpos="374277">Xの舞久々に見た</chat>
 		<chat anonymity="1" date="1730285846" date_usec="177241000" no="1981" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="373583">懐かしい！！！！</chat>
-		<chat date="1730285846" date_usec="260949000" thread="" premium="2" user_id="" vpos="3746">#れいれい近況</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3746">#れいれい近況</chat>
 		<chat anonymity="1" date="1730285846" date_usec="467633000" no="1982" thread="" premium="1" user_id="a:XQEmIhQf2t_MTYSu" vpos="373354">懐かしのポーズ</chat>
 		<chat anonymity="1" date="1730285846" date_usec="517025000" no="1983" thread="" premium="1" user_id="a:KTR_zAIOjRXnpFFw" vpos="374158">やってたね（記憶）</chat>
 		<chat date="1730285847" date_usec="224535000" name="きすけ" no="1984" thread="" premium="1" user_id="4494515" vpos="374464">Xなつかしい</chat>
@@ -2077,7 +2077,7 @@
 		<chat anonymity="1" date="1730285889" date_usec="796893000" no="2000" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="378411">次回まで覚えていられるかな・・・</chat>
 		<chat date="1730285890" date_usec="762282000" name="いずしー" no="2001" thread="" user_id="32780624" vpos="378832">首を長くして待ってるね</chat>
 		<chat anonymity="1" date="1730285891" date_usec="411403000" no="2002" thread="" premium="1" user_id="a:0zGsdky2KVVrsjPX" vpos="378875">ほんとぉ？ｗ</chat>
-		<chat date="1730285894" date_usec="344999000" thread="" premium="2" user_id="" vpos="3794">次までにルール忘れてそう</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3794">次までにルール忘れてそう</chat>
 		<chat anonymity="1" date="1730285901" date_usec="779107000" no="2003" thread="" premium="1" user_id="a:dpHialRv2ndcpVFr" vpos="379769">次になったら多分全部忘れてるれいれい　って書こうとしたら↑ｗｗｗｗｗｗｗ</chat>
 		<chat date="1730285903" date_usec="688123000" name="いずしー" no="2004" thread="" user_id="32780624" vpos="380127">理解するまでが楽しいから。ゲームって</chat>
 		<chat anonymity="1" date="1730285909" date_usec="390778000" no="2005" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="380536">初参加楽しかったです！！！</chat>
@@ -2181,7 +2181,7 @@
 		<chat anonymity="1" date="1730286028" date_usec="838336000" no="2103" thread="" user_id="a:RpnEVPvDNTQvAW_s" vpos="391568">ばいばーい</chat>
 		<chat anonymity="1" date="1730286029" date_usec="482174000" no="2104" thread="" user_id="a:JGyf_UAh4uIdOEYC" vpos="392726">よかった</chat>
 		<chat anonymity="1" date="1730286029" date_usec="640075000" no="2105" thread="" premium="1" user_id="a:BU-cJFjNRNegL5nM" vpos="392529">またー</chat>
-		<chat date="1730286031" date_usec="780837000" thread="" premium="2" user_id="" vpos="3931">本日はご視聴いただきましてありがとうございました</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3931">本日はご視聴いただきましてありがとうございました</chat>
 		<chat anonymity="1" date="1730286033" date_usec="548269000" no="2106" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="393111">早く気が向いてくれないかな…</chat>
 		<chat date="1730286034" date_usec="61334000" name="いずしー" no="2107" thread="" user_id="32780624" vpos="393161">はーこのｂｇｍも懐かしい</chat>
 		<chat anonymity="1" date="1730286036" date_usec="859098000" no="2108" thread="" premium="1" user_id="a:XQEmIhQf2t_MTYSu" vpos="392393">一瞬だった、ありがとうございました</chat>
@@ -2195,13 +2195,13 @@
 		<chat anonymity="1" date="1730286049" date_usec="80043000" no="2116" thread="" user_id="a:PnEai2J0ptzV3uJ5" vpos="394408">あほーる　にゅーわーるど</chat>
 		<chat anonymity="1" date="1730286053" date_usec="884254000" no="2117" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="394366">スタッフさんもありがとうございました！</chat>
 		<chat date="1730286054" date_usec="886508000" name="GMS" no="2118" thread="" premium="1" user_id="685452" vpos="395249">おつかれいれい</chat>
-		<chat date="1730286054" date_usec="980323000" thread="" premium="2" user_id="" vpos="3954">よろしければ最後にアンケートにご協力をお願いします</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3954">よろしければ最後にアンケートにご協力をお願いします</chat>
 		<chat anonymity="1" date="1730286056" date_usec="522802000" no="2119" thread="" premium="1" user_id="a:l1_C2TxZG4BC64yF" vpos="395345">いつも通りで安心した</chat>
 		<chat anonymity="1" date="1730286058" date_usec="571087000" no="2120" thread="" premium="1" user_id="a:dpHialRv2ndcpVFr" vpos="395438">楽しそうの話をしてるれいれいが見られたのでヨシ</chat>
 		<chat anonymity="1" date="1730286064" date_usec="970656000" no="2121" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="396093">良きスタッフ様</chat>
 		<chat date="1730286078" date_usec="827738000" name="きすけ" no="2122" thread="" premium="1" user_id="4494515" vpos="397623">いつも通りのれいれいでよかった</chat>
 		<chat anonymity="1" date="1730286079" date_usec="771150000" no="2123" thread="" premium="1" user_id="a:BU-cJFjNRNegL5nM" vpos="397533">お疲れ様でした</chat>
-		<chat date="1730286080" date_usec="247181000" thread="" premium="2" user_id="" vpos="3980">/vote new 【アンケート開始】本日の番組はいかがでしたか？
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="3980">【アンケート開始】本日の番組はいかがでしたか？
 　1：とても良かった
 　2：良かった
 　3：普通だった
@@ -2217,10 +2217,10 @@
 		<chat anonymity="1" date="1730286110" date_usec="116825000" no="2131" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="399984">圧倒的1</chat>
 		<chat anonymity="1" date="1730286110" date_usec="268123000" no="2132" thread="" user_id="a:8toBw_o2dCUMwBzD" vpos="400757">元気なれいれいが見れてうれしい</chat>
 		<chat anonymity="1" date="1730286115" date_usec="558167000" no="2133" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="400986">不定期ってことは曜日も未定なのかな</chat>
-		<chat date="1730286115" date_usec="992163000" thread="" premium="2" user_id="" vpos="402492">/nicoad {"version":"1","totalAdPoint":15300,"message":"【広告貢献5位】がまくじらさんが1000ptニコニ広告しました"}</chat>
+		<chat date="1730286115" date_usec="992163000" thread="" premium="2" user_id="" vpos="402492">/uadpoint 0 15300 "【広告貢献5位】がまくじらさんが1000ptニコニ広告しました"</chat>
 		<chat anonymity="1" date="1730286120" date_usec="667625000" no="2134" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="401665">ファンネームの神降臨してくれな</chat>
 		<chat anonymity="1" date="1730286124" date_usec="199420000" no="2135" thread="" premium="1" user_id="a:dpHialRv2ndcpVFr" vpos="402010">ワールドの住人？</chat>
-		<chat date="1730286135" date_usec="636981000" thread="" premium="2" user_id="" vpos="4035">/vote new 【アンケート結果】本日の番組はいかがでしたか？
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4035">【アンケート結果】本日の番組はいかがでしたか？
 　1：87.5% とても良かった
 　2：7.1% 良かった
 　3：1.8% 普通だった
@@ -2235,7 +2235,7 @@
 		<chat anonymity="1" date="1730286160" date_usec="235297000" no="2142" thread="" premium="1" user_id="a:XQEmIhQf2t_MTYSu" vpos="404725">普通とは</chat>
 		<chat anonymity="1" date="1730286167" date_usec="155482000" no="2143" thread="" premium="1" user_id="a:kJ0qk0SVatjUu0FG" vpos="406365">れい長類</chat>
 		<chat date="1730286168" date_usec="21242000" name="いずしー" no="2144" thread="" user_id="32780624" vpos="406558">ツンデレかな</chat>
-		<chat date="1730286170" date_usec="149663000" thread="" premium="2" user_id="" vpos="4070">/vote new 【アンケート結果】本日の番組はいかがでしたか？
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4070">【アンケート結果】本日の番組はいかがでしたか？
 　1：87.5% とても良かった
 　2：7.1% 良かった
 　3：1.8% 普通だった
@@ -2243,23 +2243,23 @@
 　5：1.8% 良くなかった</chat>
 		<chat anonymity="1" date="1730286171" date_usec="989243000" no="2145" thread="" premium="1" user_id="a:dpHialRv2ndcpVFr" vpos="406790">まぁれいれいの普通ではあったな？</chat>
 		<chat anonymity="1" date="1730286172" date_usec="166839000" no="2146" thread="" user_id="a:JGyf_UAh4uIdOEYC" vpos="406993">もしかしてこのアンケートも順位予想してる？</chat>
-		<chat date="1730286176" date_usec="408123000" thread="" premium="2" user_id="" vpos="4076">/vote new 【アンケート結果】本日の番組はいかがでしたか？
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4076">【アンケート結果】本日の番組はいかがでしたか？
 　1：87.5% とても良かった
 　2：7.1% 良かった
 　3：1.8% 普通だった
 　4：1.8% あまり良くなかった
 　5：1.8% 良くなかった</chat>
-		<chat date="1730286177" date_usec="453718000" thread="" premium="2" user_id="" vpos="4077">/vote new 【アンケート終了】</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4077">【アンケート終了】</chat>
 		<chat anonymity="1" date="1730286178" date_usec="960622000" no="2147" thread="" premium="1" user_id="a:kJ0qk0SVatjUu0FG" vpos="407550">５は妹(ツンデレ)</chat>
 		<chat anonymity="1" date="1730286183" date_usec="849493000" no="2148" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="407983">誰か言ってたレイn</chat>
-		<chat date="1730286186" date_usec="719193000" thread="" premium="2" user_id="" vpos="4086">アンケートにご協力いただきましてありがとうございました</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4086">アンケートにご協力いただきましてありがとうございました</chat>
 		<chat anonymity="1" date="1730286190" date_usec="183000000" no="2149" thread="" premium="1" user_id="a:SqZtOYNjy7hVrcrw" vpos="408593">間違っちゃったかおっちょこちょいだねぇ。</chat>
 		<chat anonymity="1" date="1730286192" date_usec="2715000" no="2150" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="408631">妹さんおる？</chat>
 		<chat date="1730286200" date_usec="85904000" name="いずしー" no="2151" thread="" user_id="32780624" vpos="409761">スタッフさんもありがとうございます。またイベントとかあると死ぬほど嬉しいです</chat>
 		<chat anonymity="1" date="1730286217" date_usec="243195000" no="2152" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="411323">レイナーがシンプルでいいじゃないか</chat>
 		<chat anonymity="1" date="1730286222" date_usec="3868000" no="2153" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="411134">いえいえ</chat>
 		<chat anonymity="1" date="1730286222" date_usec="115848000" no="2154" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="411969">まずは学園祭で会いましょう</chat>
-		<chat date="1730286222" date_usec="826330000" thread="" premium="2" user_id="" vpos="4122">久しぶりの生放送、れいれいらしさ全開でお届けしました～</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4122">久しぶりの生放送、れいれいらしさ全開でお届けしました～</chat>
 		<chat anonymity="1" date="1730286222" date_usec="999666000" no="2155" thread="" user_id="a:UfVK_vkSjI2oV3GT" vpos="411810">来年のバースデーイベもよろしく頼む</chat>
 		<chat anonymity="1" date="1730286226" date_usec="607995000" no="2156" thread="" premium="1" user_id="a:lvR6JvI7brIy__qp" vpos="412433">楽しかったよー！</chat>
 		<chat anonymity="1" date="1730286229" date_usec="724287000" no="2157" thread="" user_id="a:PnEai2J0ptzV3uJ5" vpos="412467">レイズナー？</chat>
@@ -2279,7 +2279,7 @@
 		<chat anonymity="1" date="1730286276" date_usec="785815000" no="2171" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="416649">久しぶりの放送たいへんたすかりました</chat>
 		<chat anonymity="1" date="1730286284" date_usec="593334000" no="2172" thread="" premium="1" user_id="a:lvR6JvI7brIy__qp" vpos="418234">元気もらえたよ！</chat>
 		<chat anonymity="1" date="1730286285" date_usec="680235000" no="2173" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="418167">これがれいれい近況か、、100点ってとこかな</chat>
-		<chat date="1730286289" date_usec="16226000" thread="" premium="2" user_id="" vpos="4189">今後は不定期となってしまうのですが、</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4189">今後は不定期となってしまうのですが、</chat>
 		<chat anonymity="1" date="1730286292" date_usec="647158000" no="2174" thread="" premium="1" user_id="a:H0wf-jD-orrQiwae" vpos="418869">元気でよかった</chat>
 		<chat anonymity="1" date="1730286293" date_usec="118731000" no="2175" thread="" user_id="a:UfVK_vkSjI2oV3GT" vpos="418816">また気が向いたらお願いします</chat>
 		<chat anonymity="1" date="1730286294" date_usec="25228000" no="2176" thread="" user_id="a:Gn4eya0dvl681xJk" vpos="418830">時間が足らない以外はやっぱり最高なんだよな</chat>
@@ -2289,9 +2289,9 @@
 		<chat anonymity="1" date="1730286317" date_usec="318754000" no="2180" thread="" premium="1" user_id="a:XQEmIhQf2t_MTYSu" vpos="420403">何曜日でも何時でも駆けつけます</chat>
 		<chat anonymity="1" date="1730286318" date_usec="21629000" no="2181" thread="" user_id="a:zSwr7eIc8Zwh9DcV" vpos="421569">れいれいのペースでやってもらえれば！</chat>
 		<chat anonymity="1" date="1730286322" date_usec="27631000" no="2182" thread="" premium="1" user_id="a:SqZtOYNjy7hVrcrw" vpos="421792">大丈夫、待つのは慣れてる。元気ならおｋ</chat>
-		<chat date="1730286325" date_usec="424265000" thread="" premium="2" user_id="" vpos="4225">れいれいの体調やスケジュールと相談しつつ、皆様にお届けできればと思います</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4225">れいれいの体調やスケジュールと相談しつつ、皆様にお届けできればと思います</chat>
 		<chat date="1730286336" date_usec="222914000" name="いずしー" no="2183" thread="" user_id="32780624" vpos="423379">忙しそうだし</chat>
-		<chat date="1730286341" date_usec="525200000" thread="" premium="2" user_id="" vpos="4241">その時はまた遊びに来てくださいね！</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4241">その時はまた遊びに来てくださいね！</chat>
 		<chat anonymity="1" date="1730286341" date_usec="804600000" no="2184" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="423938">ご配慮ありがとうございます</chat>
 		<chat anonymity="1" date="1730286343" date_usec="811318000" no="2185" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="423347">ありがとうございます</chat>
 		<chat anonymity="1" date="1730286347" date_usec="337586000" no="2186" thread="" user_id="a:btn5KuHGeydckSJ_" vpos="424247">売れっ子だからね</chat>
@@ -2308,7 +2308,7 @@
 		<chat anonymity="1" date="1730286365" date_usec="936471000" no="2197" thread="" user_id="a:PnEai2J0ptzV3uJ5" vpos="426096">はーーーーーい！！</chat>
 		<chat anonymity="1" date="1730286366" date_usec="996883000" no="2198" thread="" user_id="a:JGyf_UAh4uIdOEYC" vpos="426477">また来るからね～！</chat>
 		<chat anonymity="1" date="1730286368" date_usec="323542000" no="2199" thread="" user_id="a:btn5KuHGeydckSJ_" vpos="426350">また来まーす</chat>
-		<chat date="1730286368" date_usec="511221000" thread="" premium="2" user_id="" vpos="4268">11月中にはおまけ報告動画と、ブロマガも公開する予定なので</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4268">11月中にはおまけ報告動画と、ブロマガも公開する予定なので</chat>
 		<chat date="1730286368" date_usec="701105000" name="いずしー" no="2200" thread="" user_id="32780624" vpos="426626">またこさせてください😭</chat>
 		<chat anonymity="1" date="1730286370" date_usec="151007000" no="2201" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="426613">気の向くままにお願いします</chat>
 		<chat anonymity="1" date="1730286372" date_usec="562888000" no="2202" thread="" user_id="a:zSwr7eIc8Zwh9DcV" vpos="427036">次回楽しみにしてます～</chat>
@@ -2318,13 +2318,13 @@
 		<chat anonymity="1" date="1730286381" date_usec="696702000" no="2206" thread="" premium="1" user_id="a:SqZtOYNjy7hVrcrw" vpos="427759">おまけとブロマガたすかる</chat>
 		<chat anonymity="1" date="1730286386" date_usec="309971000" no="2207" thread="" premium="1" user_id="a:XQEmIhQf2t_MTYSu" vpos="427600">やったー</chat>
 		<chat anonymity="1" date="1730286389" date_usec="480752000" no="2208" thread="" user_id="a:UfVK_vkSjI2oV3GT" vpos="428461">次回も楽しみにしてます💪</chat>
-		<chat date="1730286389" date_usec="482217000" thread="" premium="2" user_id="" vpos="4289">そちらも楽しみにしていただければと思います！</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4289">そちらも楽しみにしていただければと思います！</chat>
 		<chat anonymity="1" date="1730286392" date_usec="663255000" no="2209" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="428863">やったよー</chat>
 		<chat anonymity="1" date="1730286393" date_usec="184081000" no="2210" thread="" premium="1" user_id="a:SqZtOYNjy7hVrcrw" vpos="428908">会えるの楽しみ～</chat>
 		<chat anonymity="1" date="1730286394" date_usec="716703000" no="2211" thread="" user_id="a:JGyf_UAh4uIdOEYC" vpos="429252">はーい！</chat>
 		<chat anonymity="1" date="1730286400" date_usec="726386000" no="2212" thread="" premium="1" user_id="a:lvR6JvI7brIy__qp" vpos="429848">楽しみにしてます！</chat>
 		<chat anonymity="1" date="1730286402" date_usec="394159000" no="2213" thread="" user_id="a:PnEai2J0ptzV3uJ5" vpos="429748">どちらも楽しみです！</chat>
-		<chat date="1730286403" date_usec="433253000" thread="" premium="2" user_id="" vpos="4303">ということで、また次回お会いしましょう！</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4303">ということで、また次回お会いしましょう！</chat>
 		<chat anonymity="1" date="1730286403" date_usec="499333000" no="2214" thread="" premium="1" user_id="a:SqZtOYNjy7hVrcrw" vpos="429939">は～い</chat>
 		<chat anonymity="1" date="1730286406" date_usec="427523000" no="2215" thread="" user_id="a:btn5KuHGeydckSJ_" vpos="430160">楽しみに待ってます</chat>
 		<chat anonymity="1" date="1730286407" date_usec="410218000" no="2216" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="430496">了解です</chat>
@@ -2333,13 +2333,13 @@
 		<chat anonymity="1" date="1730286412" date_usec="686778000" no="2219" thread="" premium="1" user_id="a:SqZtOYNjy7hVrcrw" vpos="430857">お疲れ様でした。</chat>
 		<chat anonymity="1" date="1730286413" date_usec="274658000" no="2220" thread="" premium="1" user_id="a:sENE0aFLPWjxe1wZ" vpos="431065">まってま～～す！</chat>
 		<chat anonymity="1" date="1730286416" date_usec="883917000" no="2221" thread="" premium="1" user_id="a:0KpEBu0fXI-uZ83G" vpos="431286">またあえる日まで</chat>
-		<chat date="1730286417" date_usec="59133000" thread="" premium="2" user_id="" vpos="4317">ご視聴ありがとうございました！</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4317">ご視聴ありがとうございました！</chat>
 		<chat anonymity="1" date="1730286417" date_usec="440439000" no="2222" thread="" user_id="a:btn5KuHGeydckSJ_" vpos="431263">さようなら</chat>
 		<chat date="1730286418" date_usec="814796000" name="いずしー" no="2223" thread="" user_id="32780624" vpos="431638">ブロマガだけでもたまに来てもいいのよ。動画が一番だけど</chat>
 		<chat anonymity="1" date="1730286419" date_usec="866999000" no="2224" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="431743">またね</chat>
 		<chat anonymity="1" date="1730286421" date_usec="417601000" no="2225" thread="" user_id="a:UfVK_vkSjI2oV3GT" vpos="431645">おつかれさまでした！！！！！！</chat>
 		<chat anonymity="1" date="1730286421" date_usec="988776000" no="2226" thread="" premium="1" user_id="a:vv6esYdZ3Xq3VijO" vpos="431149">ありがとうございました！！！！</chat>
-		<chat date="1730286425" date_usec="248128000" thread="" premium="2" user_id="" vpos="4325">ではでは～ﾉｼ</chat>
+		<chat date="0" date_usec="0" thread="" premium="2" user_id="" vpos="4325">ではでは～ﾉｼ</chat>
 		<chat anonymity="1" date="1730286429" date_usec="537805000" no="2227" thread="" premium="1" user_id="a:bZMR84TXjYISdIGY" vpos="432708">ノシ</chat>
 		<chat date="1730286431" date_usec="266694000" name="いずしー" no="2228" thread="" user_id="32780624" vpos="432886">ありがとうございました！！</chat>
 		<chat anonymity="1" date="1730286431" date_usec="970894000" no="2229" thread="" premium="1" user_id="a:4ghNPfhWxK1JY0FO" vpos="432744">つながり感じられなかった</chat>
