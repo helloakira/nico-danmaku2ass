@@ -96,6 +96,7 @@ function connect_WebSocket_comment()
 {
   websocket_comment = new WebSocket(uri_comment, 'msg.nicovideo.jp#json', {
     headers: {
+      'Access-Control-Allow-Origin': '*',
       'Sec-WebSocket-Extensions': 'permessage-deflate; client_max_window_bits',
       'Sec-WebSocket-Protocol': 'msg.nicovideo.jp#json',
     },

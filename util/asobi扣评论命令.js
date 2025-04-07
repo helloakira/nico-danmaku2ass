@@ -1,4 +1,4 @@
-var uri_comment = "wss://replay.asobistore.jp/shinycolors_6th_ff_re2_ch1/archive";
+var uri_comment = "wss://replay.asobistore.jp/shinycolors_over_the_prism_re_day2_ch1/archive";
 
 var ws = new WebSocket(uri_comment)
 
